@@ -50,7 +50,7 @@ class BalanceController: UIViewController {
 
         view.backgroundColor = Theme.lightGrayBackgroundColor
 
-        title = Localized("balance_navigation_title")
+        title = Localized.balance_navigation_title
 
         view.addSubview(tableView)
         tableView.edges(to: view)
@@ -74,11 +74,11 @@ class BalanceController: UIViewController {
     }
 
     private func showSecurityAlert() {
-        let alert = UIAlertController(title: Localized("settings_deposit_error_title"), message: Localized("settings_deposit_error_message"), preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: Localized("cancel_action_title"), style: .default, handler: { _ in
+        let alert = UIAlertController(title: Localized.settings_deposit_error_title, message: Localized.settings_deposit_error_message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: Localized.cancel_action_title, style: .default, handler: { _ in
             alert.dismiss(animated: true, completion: nil)
         }))
-        alert.addAction(UIAlertAction(title: Localized("settings_deposit_error_action_backup"), style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: Localized.settings_deposit_error_action_backup, style: .default, handler: { _ in
             let passphraseEnableController = PassphraseEnableController()
             let navigationController = UINavigationController(rootViewController: passphraseEnableController)
             Navigator.presentModally(navigationController)
@@ -158,12 +158,12 @@ extension BalanceController: UITableViewDataSource {
             }
         case .send:
             cell = tableView.dequeue(UITableViewCell.self, for: indexPath)
-            cell.textLabel?.text = Localized("balance_action_send")
+            cell.textLabel?.text = Localized.balance_action_send
             cell.textLabel?.textColor = Theme.tintColor
             cell.textLabel?.font = Theme.preferredRegular()
         case .deposit:
             cell = tableView.dequeue(UITableViewCell.self, for: indexPath)
-            cell.textLabel?.text = Localized("balance_action_deposit")
+            cell.textLabel?.text = Localized.balance_action_deposit
             cell.textLabel?.textColor = Theme.tintColor
             cell.textLabel?.font = Theme.preferredRegular()
         }

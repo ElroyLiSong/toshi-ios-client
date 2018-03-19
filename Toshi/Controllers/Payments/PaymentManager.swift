@@ -46,7 +46,7 @@ class PaymentManager {
             guard let weakSelf = self else { return }
 
             if let error = error {
-                Navigator.presentDismissableAlert(title: Localized("confirmation_error_transaction"), message: error.description)
+                Navigator.presentDismissableAlert(title: Localized.confirmation_error_transaction, message: error.description)
                 return
             }
 
@@ -74,7 +74,7 @@ class PaymentManager {
             /// We don't care about the cached balance since we immediately want to know if the current balance is sufficient or not.
             weakSelf.ethereumApiClient.getBalance(cachedBalanceCompletion: { _, _ in }, fetchedBalanceCompletion: { fetchedBalance, error in
                 if let error = error {
-                    Navigator.presentDismissableAlert(title: Localized("confirmation_error_balance"), message: error.description)
+                    Navigator.presentDismissableAlert(title: Localized.confirmation_error_balance, message: error.description)
                     return
                 }
 
@@ -110,7 +110,7 @@ class PaymentManager {
 
         ethereumApiClient.sendSignedTransaction(originalTransaction: transaction, transactionSignature: signedTransaction) { _, transactionHash, error in
             if let error = error {
-                Navigator.presentDismissableAlert(title: Localized("confirmation_error_payment"), message: error.description)
+                Navigator.presentDismissableAlert(title: Localized.confirmation_error_payment, message: error.description)
                 return
             }
             

@@ -78,7 +78,7 @@ class MessagesBasicCell: UITableViewCell {
             .paragraphStyle: paragraphStyle
         ]
 
-        let attributedString = NSMutableAttributedString(string: Localized("messages_sent_error"), attributes: attributes)
+        let attributedString = NSMutableAttributedString(string: Localized.messages_sent_error, attributes: attributes)
         attributedString.addAttributes(boldAttributes, range: NSRange(location: 0, length: 13))
 
         let view = UILabel()

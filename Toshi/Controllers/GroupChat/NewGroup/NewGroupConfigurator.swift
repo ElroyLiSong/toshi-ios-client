@@ -21,7 +21,7 @@ final class NewGroupConfigurator: CellConfigurator {
     override func configureCell(_ cell: UITableViewCell, with cellData: TableCellData) {
         guard let cell = cell as? BasicTableViewCell else { return }
 
-        cell.titleTextField.placeholder = Localized("new_group_title")
+        cell.titleTextField.placeholder = Localized.new_group_title
         cell.titleTextField.text = cellData.title
 
         cell.subtitleLabel.text = cellData.subtitle

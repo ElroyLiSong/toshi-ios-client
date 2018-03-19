@@ -43,7 +43,7 @@ final class WalletTableHeaderView: UIView {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = Theme.lightTextColor
-        label.text = Localized("wallet_address_title")
+        label.text = Localized.wallet_address_title
         label.font = Theme.preferredSemibold()
 
         return label
@@ -53,7 +53,7 @@ final class WalletTableHeaderView: UIView {
         let label = UILabel()
         label.textColor = Theme.lightTextColor.withAlphaComponent(0.8)
         label.numberOfLines = 0
-        label.text = Localized("wallet_address_subtitle")
+        label.text = Localized.wallet_address_subtitle
         label.font = Theme.preferredFootnote()
 
         return label
@@ -76,7 +76,7 @@ final class WalletTableHeaderView: UIView {
         button.layer.cornerRadius = 2
         button.contentEdgeInsets = UIEdgeInsets(top: .smallInterItemSpacing, left: .mediumInterItemSpacing, bottom: .smallInterItemSpacing, right: .mediumInterItemSpacing)
         button.titleLabel?.font = Theme.preferredFootnote()
-        button.setTitle(Localized("copy_action_title"), for: .normal)
+        button.setTitle(Localized.copy_action_title, for: .normal)
         button.setTitleColor(Theme.tintColor, for: .normal)
         button.addTarget(self, action: #selector(copyAddressTapped), for: .touchUpInside)
         button.setContentCompressionResistancePriority(.required, for: .horizontal)

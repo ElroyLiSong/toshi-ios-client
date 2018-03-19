@@ -31,9 +31,9 @@ enum PaymentValueViewControllerPaymentType {
     var title: String {
         switch self {
         case .request:
-            return Localized("payment_request")
+            return Localized.payment_request
         case .send:
-            return Localized("payment_send")
+            return Localized.payment_send
         }
     }
 }
@@ -45,9 +45,9 @@ enum PaymentValueViewControllerContinueOption {
     var buttonTitle: String {
         switch self {
         case .next:
-            return Localized("payment_next_button")
+            return Localized.payment_next_button
         case .send:
-            return Localized("payment_send_button")
+            return Localized.payment_send_button
         }
     }
 }

@@ -23,14 +23,14 @@ class PassphraseCopyController: UIViewController {
     }
 
     lazy var textLabel: UILabel = {
-        let view = TextLabel(Localized("passphrase_copy_text"))
+        let view = TextLabel(Localized.passphrase_copy_text)
 
         return view
     }()
 
     private lazy var actionButton: ActionButton = {
         let view = ActionButton(margin: 30)
-        view.title = Localized("passphrase_copy_action")
+        view.title = Localized.passphrase_copy_action
         view.addTarget(self, action: #selector(proceed(_:)), for: .touchUpInside)
 
         return view
@@ -40,8 +40,8 @@ class PassphraseCopyController: UIViewController {
 
     private lazy var copyButton: ConfirmationButton = {
         let view = ConfirmationButton(withAutoLayout: true)
-        view.title = Localized("passphrase_copy_confirm_title")
-        view.confirmation = Localized("passphrase_copy_confirm_copied")
+        view.title = Localized.passphrase_copy_confirm_title
+        view.confirmation = Localized.passphrase_copy_confirm_copied
         view.addTarget(self, action: #selector(copyToClipBoard(_:)), for: .touchUpInside)
 
         return view
@@ -52,7 +52,7 @@ class PassphraseCopyController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
 
-        title = Localized("passphrase_copy_navigation_title")
+        title = Localized.passphrase_copy_navigation_title
         hidesBottomBarWhenPushed = true
     }
 

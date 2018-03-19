@@ -28,7 +28,7 @@ class WalletNavigationController: UINavigationController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 
-        tabBarItem = UITabBarItem(title: Localized("tab_bar_title_wallet"), image: #imageLiteral(resourceName: "tab3"), tag: 0)
+        tabBarItem = UITabBarItem(title: Localized.tab_bar_title_wallet, image: #imageLiteral(resourceName: "tab3"), tag: 0)
         tabBarItem.titlePositionAdjustment.vertical = TabBarItemTitleOffset
     }
 

@@ -151,7 +151,7 @@ final class DisappearingBackgroundNavBar: UIView {
     
     /// Sets up the left button to appear to be a back button.
     func setupLeftAsBackButton() {
-        setLeftButtonImage(#imageLiteral(resourceName: "navigation_back"), accessibilityLabel: Localized("nav_bar_back"))
+        setLeftButtonImage(#imageLiteral(resourceName: "navigation_back"), accessibilityLabel: Localized.nav_bar_back)
     }
     
     /// Takes an image, turns it into an always-template image, then sets it to the left button and un-hides the left button.

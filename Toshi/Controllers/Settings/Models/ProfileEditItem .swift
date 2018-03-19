@@ -64,19 +64,19 @@ class ProfileEditItem {
         
         switch type {
         case .username:
-            titleText = Localized("edit_profile_username_label")
+            titleText = Localized.edit_profile_username_label
             detailText = user.username
         case .displayName:
-            titleText = Localized("edit_profile_display_name_label")
+            titleText = Localized.edit_profile_display_name_label
             detailText = user.name
         case .about:
-            titleText = Localized("edit_profile_about_label")
+            titleText = Localized.edit_profile_about_label
             detailText = user.about
         case .location:
-            titleText = Localized("edit_profile_location_label")
+            titleText = Localized.edit_profile_location_label
             detailText = user.location
         case .visibility:
-            titleText = Localized("edit_profile_public_label")
+            titleText = Localized.edit_profile_public_label
             switchMode = user.isPublic
         default:
             break

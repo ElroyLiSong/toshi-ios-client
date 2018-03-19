@@ -22,7 +22,7 @@ enum ThreadsContentSection: Int {
     var title: String? {
         switch self {
         case .acceptedThreads:
-            return Localized("recent_messages_section_header_title")
+            return Localized.recent_messages_section_header_title
         default:
             return nil
         }
@@ -36,9 +36,9 @@ enum ThreadsDataSourceTarget {
     var title: String {
         switch self {
         case .recent:
-            return Localized("tab_bar_title_recent")
+            return Localized.tab_bar_title_recent
         case .unacceptedThreadRequests:
-            return Localized("messages_requests_title")
+            return Localized.messages_requests_title
         }
     }
 
@@ -47,7 +47,7 @@ enum ThreadsDataSourceTarget {
 
         switch contentSection {
         case .acceptedThreads:
-            return Localized("recent_messages_section_header_title")
+            return Localized.recent_messages_section_header_title
         default:
             return nil
         }

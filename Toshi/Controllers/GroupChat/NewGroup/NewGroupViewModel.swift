@@ -130,15 +130,15 @@ extension NewGroupViewModel: GroupViewModelProtocol {
         return #selector(createGroup)
     }
 
-    var viewControllerTitle: String { return Localized("new_group_title") }
-    var rightBarButtonTitle: String { return Localized("create_group_button_title") }
-    var imagePickerTitle: String { return Localized("image-picker-select-source-title") }
-    var imagePickerCameraActionTitle: String { return Localized("image-picker-camera-action-title") }
-    var imagePickerLibraryActionTitle: String { return Localized("image-picker-library-action-title") }
-    var imagePickerCancelActionTitle: String { return Localized("cancel_action_title") }
+    var viewControllerTitle: String { return Localized.new_group_title }
+    var rightBarButtonTitle: String { return Localized.create_group_button_title }
+    var imagePickerTitle: String { return Localized.image_picker_select_source_title }
+    var imagePickerCameraActionTitle: String { return Localized.image_picker_camera_action_title }
+    var imagePickerLibraryActionTitle: String { return Localized.image_picker_library_action_title }
+    var imagePickerCancelActionTitle: String { return Localized.cancel_action_title }
 
-    var errorAlertTitle: String { return Localized("error_title") }
-    var errorAlertMessage: String { return Localized("toshi_generic_error") }
+    var errorAlertTitle: String { return Localized.error_title }
+    var errorAlertMessage: String { return Localized.toshi_generic_error }
 
     var isDoneButtonEnabled: Bool { return groupInfo.title.count > 0 }
 

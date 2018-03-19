@@ -28,7 +28,7 @@ class SettingsNavigationController: UINavigationController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 
-        tabBarItem = UITabBarItem(title: Localized("tab_bar_title_settings"), image: #imageLiteral(resourceName: "tab5"), tag: 0)
+        tabBarItem = UITabBarItem(title: Localized.tab_bar_title_settings, image: #imageLiteral(resourceName: "tab5"), tag: 0)
         tabBarItem.titlePositionAdjustment.vertical = TabBarItemTitleOffset
     }
 

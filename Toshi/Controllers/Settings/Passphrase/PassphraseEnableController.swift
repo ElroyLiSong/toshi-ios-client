@@ -19,17 +19,17 @@ import SweetUIKit
 class PassphraseEnableController: UIViewController {
 
     private lazy var titleLabel: TextLabel = {
-        let textLabel = TextLabel(Localized("passphrase_enable_title"))
+        let textLabel = TextLabel(Localized.passphrase_enable_title)
         textLabel.font = Theme.preferredSemibold()
         textLabel.adjustsFontForContentSizeCategory = true
 
         return textLabel
     }()
     
-    lazy var textLabel = TextLabel(Localized("passphrase_enable_text"))
+    lazy var textLabel = TextLabel(Localized.passphrase_enable_text)
     
     lazy var checkboxControl: CheckboxControl = {
-        let text = Localized("passphrase_enable_checkbox")
+        let text = Localized.passphrase_enable_checkbox
 
         let view = CheckboxControl()
         view.title = text
@@ -40,7 +40,7 @@ class PassphraseEnableController: UIViewController {
 
     private lazy var actionButton: ActionButton = {
         let view = ActionButton(margin: 30)
-        view.title = Localized("passphrase_enable_action")
+        view.title = Localized.passphrase_enable_action
         view.isEnabled = false
         view.addTarget(self, action: #selector(proceed(_:)), for: .touchUpInside)
 
@@ -58,7 +58,7 @@ class PassphraseEnableController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
 
-        title = Localized("passphrase_enable_navigation_title")
+        title = Localized.passphrase_enable_navigation_title
         hidesBottomBarWhenPushed = true
     }
 

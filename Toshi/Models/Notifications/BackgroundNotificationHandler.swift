@@ -46,10 +46,10 @@ class BackgroundNotificationHandler: NSObject {
 
     static func enqueueLocalNotification(for payment: SofaPayment) {
         let content = UNMutableNotificationContent()
-        content.title = Localized("notification_payment_received_in_background_title")
+        content.title = Localized.notification_payment_received_in_background_title
 
         let value = EthereumConverter.fiatValueString(forWei: payment.value, exchangeRate: ExchangeRateClient.exchangeRate)
-        let format = Localized("notification_payment_received_in_background_message_format")
+        let format = Localized.notification_payment_received_in_background_message_format
         content.body = String(format: format, value)
 
         content.sound = UNNotificationSound(named: "PN.m4a")

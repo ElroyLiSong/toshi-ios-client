@@ -27,7 +27,7 @@ final class CurrencyPicker: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = Localized("currency_picker_title")
+        title = Localized.currency_picker_title
         view.backgroundColor = Theme.lightGrayBackgroundColor
         addSubviewsAndConstraints()
 
@@ -135,9 +135,9 @@ extension CurrencyPicker: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return suggestedCurrencies.count > 0 ? Localized("currency_picker_header_suggested") : nil
+            return suggestedCurrencies.count > 0 ? Localized.currency_picker_header_suggested : nil
         default:
-            return otherCurrencies.count > 0 ? Localized("currency_picker_header_other") : nil
+            return otherCurrencies.count > 0 ? Localized.currency_picker_header_other : nil
         }
     }
 }

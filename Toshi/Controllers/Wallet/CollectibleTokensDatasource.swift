@@ -66,7 +66,7 @@ final class CollectibleTokensDatasource {
     }
 
     private func showErrorAlert(_ error: ToshiError) {
-        let alertController = UIAlertController.dismissableAlert(title: Localized("toshi_generic_error"), message: error.description)
+        let alertController = UIAlertController.dismissableAlert(title: Localized.toshi_generic_error, message: error.description)
         Navigator.presentModally(alertController)
     }
 }

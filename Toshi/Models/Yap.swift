@@ -27,9 +27,9 @@ protocol Singleton: class {
     var description: String {
         switch self {
         case .missingDatabaseFile:
-            return Localized("yap_missing_db_file_error_description")
+            return Localized.yap_missing_db_file_error_description
         case .missingKeychainPassword:
-            return Localized("yap_missing_password_error_description")
+            return Localized.yap_missing_password_error_description
         }
     }
 }

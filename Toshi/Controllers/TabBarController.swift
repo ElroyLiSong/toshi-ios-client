@@ -53,7 +53,7 @@ class TabBarController: UITabBarController, OfflineAlertDisplaying {
     }()
 
     lazy var scannerController: ScannerViewController = {
-        let controller = ScannerController(instructions: Localized("qr_scanner_instructions"), types: [.qrCode])
+        let controller = ScannerController(instructions: Localized.qr_scanner_instructions, types: [.qrCode])
         controller.delegate = self
 
         return controller
@@ -210,8 +210,8 @@ extension TabBarController: ScannerViewControllerDelegate {
     func scannerViewController(_ controller: ScannerViewController, didScanResult result: String) {
         
         guard reachabilityManager.reachability?.currentReachabilityStatus != .notReachable else {
-            let alert = UIAlertController(title: Localized("error-alert-title"), message: Localized("offline_alert_message"), preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: Localized("alert-ok-action-title"), style: .cancel, handler: { _ in
+            let alert = UIAlertController(title: Localized.error_alert_title, message: Localized.offline_alert_message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: Localized.alert_ok_action_title, style: .cancel, handler: { _ in
                 self.scannerController.startScanning()
             }))
             
@@ -234,10 +234,10 @@ extension TabBarController: ScannerViewControllerDelegate {
                 let ethValueString = EthereumConverter.ethereumValueString(forWei: valueInWei)
 
                 if let username = username {
-                    let confirmationText = String(format: Localized("payment_request_confirmation_warning_message"), fiatValueString, ethValueString, username)
+                    let confirmationText = String(format: Localized.payment_request_confirmation_warning_message, fiatValueString, ethValueString, username)
                     proceedToPayment(username: username, weiValue: weiValue, confirmationText: confirmationText)
                 } else if let address = address {
-                    let confirmationText = String(format: Localized("payment_request_confirmation_warning_message"), fiatValueString, ethValueString, address)
+                    let confirmationText = String(format: Localized.payment_request_confirmation_warning_message, fiatValueString, ethValueString, address)
                     proceedToPayment(address: address, weiValue: weiValue, confirmationText: confirmationText)
                 }
             case .addContact(let username):

@@ -39,14 +39,14 @@ class RateUserController: ModalPresentable {
     }()
 
     lazy var titleLabel: TitleLabel = {
-        let format = Localized("rate_user_title_format")
+        let format = Localized.rate_user_title_format
         let view = TitleLabel(String(format: format, self.user.username))
 
         return view
     }()
 
     lazy var textLabel: UILabel = {
-        let view = TextLabel(String(format: Localized("rate_user_message_format"), self.user.displayUsername))
+        let view = TextLabel(String(format: Localized.rate_user_message_format, self.user.displayUsername))
         view.textAlignment = .center
         view.textColor = Theme.darkTextColor
 
@@ -63,7 +63,7 @@ class RateUserController: ModalPresentable {
 
     private lazy var cancelButton: ActionButton = {
         let view = ActionButton(margin: 0)
-        view.title = Localized("not_now_action_title")
+        view.title = Localized.not_now_action_title
         view.background.layer.cornerRadius = 0
         view.titleLabel.font = Theme.regular(size: 18)
         
@@ -75,7 +75,7 @@ class RateUserController: ModalPresentable {
 
     private lazy var submitButton: ActionButton = {
         let view = ActionButton(margin: 0)
-        view.title = Localized("submit_action_title")
+        view.title = Localized.submit_action_title
         view.background.layer.cornerRadius = 0
         view.titleLabel.font = Theme.semibold(size: 18)
         view.isEnabled = false
@@ -101,7 +101,7 @@ class RateUserController: ModalPresentable {
         view.font = UIFont.systemFont(ofSize: 16)
         view.internalTextView.textContainerInset = UIEdgeInsets(top: 8, left: 5, bottom: 5, right: 5)
         view.internalTextView.scrollIndicatorInsets = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 5)
-        view.placeholder = Localized("rating_starter_placeholder")
+        view.placeholder = Localized.rating_starter_placeholder
         view.returnKeyType = .done
 
         return view

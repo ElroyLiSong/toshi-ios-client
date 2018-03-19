@@ -57,7 +57,7 @@ final class SendTokenViewConfigurator: NSObject {
 
     private lazy var amountTitleLabel: UILabel = {
         let label = UILabel(withAutoLayout: true)
-        label.text = Localized("wallet_amount_label")
+        label.text = Localized.wallet_amount_label
         label.textColor = Theme.greyTextColor
         label.font = Theme.preferredProTextMedium(range: 13...15)
 
@@ -66,7 +66,7 @@ final class SendTokenViewConfigurator: NSObject {
 
     private lazy var toTitleLabel: UILabel = {
         let label = UILabel(withAutoLayout: true)
-        label.text = Localized("wallet_to_label")
+        label.text = Localized.wallet_to_label
         label.textColor = Theme.greyTextColor
         label.font = Theme.preferredProTextMedium(range: 13...15)
 
@@ -105,7 +105,7 @@ final class SendTokenViewConfigurator: NSObject {
 
     private lazy var balanceLabel: UILabel = {
         let label = UILabel(withAutoLayout: true)
-        label.text = String(format: Localized("wallet_token_balance_format"), self.token.symbol, self.token.displayValueString)
+        label.text = String(format: Localized.wallet_token_balance_format, self.token.symbol, self.token.displayValueString)
         label.textColor = Theme.lightGreyTextColor
         label.font = Theme.preferredProTextRegular(range: 13...15)
         label.tag = SendTokenViews.balanceLabel.rawValue
@@ -159,7 +159,7 @@ final class SendTokenViewConfigurator: NSObject {
 
     private lazy var maxButton: UIButton = {
         let button = UIButton.borderedButton(with: Theme.lightGreyTextColor)
-        button.setTitle(Localized("wallet_max_value_title"), for: .normal)
+        button.setTitle(Localized.wallet_max_value_title, for: .normal)
         button.addTarget(self, action: #selector(maxButtonTapped(_:)), for: .touchUpInside)
         button.setContentCompressionResistancePriority(.required, for: .horizontal)
         button.setTitleColor(Theme.lightTextColor, for: .selected)
@@ -186,7 +186,7 @@ final class SendTokenViewConfigurator: NSObject {
 
     private lazy var pasteButton: UIButton = {
         let button = UIButton.borderedButton(with: Theme.lightGreyTextColor)
-        button.setTitle(Localized("text_editing_options_paste"), for: .normal)
+        button.setTitle(Localized.text_editing_options_paste, for: .normal)
         button.addTarget(self, action: #selector(pasteButtonTapped), for: .touchUpInside)
         button.setContentHuggingPriority(.required, for: .horizontal)
         button.height(inlineButtonHeight)
@@ -198,7 +198,7 @@ final class SendTokenViewConfigurator: NSObject {
     private lazy var scanButton: UIButton = {
         let button = UIButton.borderedButton(with: Theme.lightGreyTextColor)
         button.setImage(#imageLiteral(resourceName: "scan"), for: .normal)
-        button.setTitle(Localized("wallet_scan_QR_label"), for: .normal)
+        button.setTitle(Localized.wallet_scan_QR_label, for: .normal)
         button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: CGFloat.smallInterItemSpacing)
         button.titleEdgeInsets = UIEdgeInsets(top: 0, left: CGFloat.smallInterItemSpacing, bottom: 0, right: 0)
         button.addTarget(self, action: #selector(scanButtonTapped), for: .touchUpInside)
@@ -211,7 +211,7 @@ final class SendTokenViewConfigurator: NSObject {
 
     private lazy var continueButton: ActionButton = {
         let button = ActionButton(margin: CGFloat.defaultMargin)
-        button.title = Localized("continue_action_title")
+        button.title = Localized.continue_action_title
         button.addTarget(self, action: #selector(didTapContinueButton), for: .touchUpInside)
         button.height(50)
         button.isEnabled = false
@@ -340,13 +340,13 @@ final class SendTokenViewConfigurator: NSObject {
         }
 
         isShowingFinalValueAlert = true
-        let alert = UIAlertController(title: Localized("wallet_final_amount_alert_title"), message: Localized("wallet_final_amount_alert_message"), preferredStyle: .alert)
-        let okAction = UIAlertAction(title: Localized("alert-ok-action-title"), style: .default, handler: { _ in
+        let alert = UIAlertController(title: Localized.wallet_final_amount_alert_title, message: Localized.wallet_final_amount_alert_message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: Localized.alert_ok_action_title, style: .default, handler: { _ in
             self.isShowingFinalValueAlert = false
             self.setMaxValue()
         })
 
-        let cancelAction = UIAlertAction(title: Localized("cancel_action_title"), style: .cancel, handler: { _ in
+        let cancelAction = UIAlertAction(title: Localized.cancel_action_title, style: .cancel, handler: { _ in
             self.isShowingFinalValueAlert = false
         })
 
@@ -447,7 +447,7 @@ final class SendTokenViewConfigurator: NSObject {
             switch errorView {
             case .addressLabel:
                 adjustAddressErrorLabelHidden(to: false)
-                addressErrorLabel.text = Localized("wallet_invalid_ethereum_address_error")
+                addressErrorLabel.text = Localized.wallet_invalid_ethereum_address_error
             case .balanceLabel:
                 showInsuffisientBalanceError()
             default:

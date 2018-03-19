@@ -39,16 +39,16 @@ class DepositMoneyController: UIViewController {
     convenience init(for username: String, name _: String) {
         self.init(nibName: nil, bundle: nil)
 
-        title = Localized("deposit_money_title")
+        title = Localized.deposit_money_title
 
         items = [
-            .header(Localized("deposit_money_header_text")),
-            .bulletPoint(Localized("deposit_money_1_title"), String(format: Localized("deposit_money_1_text"), walletAddress)),
-            .copyToClipBoard(Localized("copy_to_clipboard_action"), Localized("copy_to_clipboard_feedback"), #selector(copyToClipBoard(_:))),
+            .header(Localized.deposit_money_header_text),
+            .bulletPoint(Localized.deposit_money_1_title, String(format: Localized.deposit_money_1_text, walletAddress)),
+            .copyToClipBoard(Localized.copy_to_clipboard_action, Localized.copy_to_clipboard_feedback, #selector(copyToClipBoard(_:))),
             .QRCode(Cereal.shared.walletAddressQRCodeImage(resizeRate: 20)),
-            .bulletPoint(Localized("deposit_money_2_title"), Localized("deposit_money_2_text")),
-            .bulletPoint(Localized("deposit_money_3_title"), Localized("deposit_money_3_text")),
-            .bulletPoint(Localized("deposit_money_4_title"), Localized("deposit_money_4_text"))
+            .bulletPoint(Localized.deposit_money_2_title, Localized.deposit_money_2_text),
+            .bulletPoint(Localized.deposit_money_3_title, Localized.deposit_money_3_text),
+            .bulletPoint(Localized.deposit_money_4_title, Localized.deposit_money_4_text)
         ]
     }
 

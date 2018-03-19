@@ -26,9 +26,9 @@ enum NetworkInfo {
 
     struct Label {
 
-        static let MainNet = Localized("mainnet-title")
-        static let RopstenTestNetwork = Localized("ropsten-test-network-title")
-        static let ToshiTestNetwork = Localized("toshi-test-network-title")
+        static let MainNet = Localized.mainnet_title
+        static let RopstenTestNetwork = Localized.ropsten_test_network_title
+        static let ToshiTestNetwork = Localized.toshi_test_network_title
     }
 
     struct Path {

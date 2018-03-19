@@ -28,7 +28,7 @@ class ProfilesAddGroupHeader: UIView {
     private lazy var button: LeftAlignedButton = {
         let view = LeftAlignedButton()
         view.icon = UIImage(color: .lightGray, size: CGSize(width: 48, height: 48))
-        view.title = Localized("profiles_new_group")
+        view.title = Localized.profiles_new_group
         view.icon = UIImage(named: "navigation_bar_add")
         view.titleColor = Theme.tintColor
         view.addTarget(self,

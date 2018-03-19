@@ -70,10 +70,10 @@ final class SessionManager {
 
         }, failure: { _ in
 
-            let alertController = UIAlertController(title: Localized("sign-out-failure-title"),
-                                                    message: Localized("sign-out-failure-message"),
+            let alertController = UIAlertController(title: Localized.sign_out_failure_title,
+                                                    message: Localized.sign_out_failure_message,
                                                     preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: Localized("alert-ok-action-title"),
+            alertController.addAction(UIAlertAction(title: Localized.alert_ok_action_title,
                                                     style: .default,
                                                     handler: nil))
             Navigator.presentModally(alertController)

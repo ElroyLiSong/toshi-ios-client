@@ -29,7 +29,7 @@ final class PaymentAddressInputView: UIView {
         let view = UITextField()
         view.font = Theme.preferredRegular()
         view.delegate = self
-        view.placeholder = Localized("payment_input_placeholder")
+        view.placeholder = Localized.payment_input_placeholder
         view.returnKeyType = .send
         view.adjustsFontForContentSizeCategory = true
 

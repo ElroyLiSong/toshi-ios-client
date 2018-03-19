@@ -50,7 +50,7 @@ final class ProfilesNavigationController: UINavigationController {
     // MARK: - Configuration
     
     private func configureTabBarItem() {
-        tabBarItem = UITabBarItem(title: Localized("tab_bar_title_favorites"), image: #imageLiteral(resourceName: "tab4"), tag: 1)
+        tabBarItem = UITabBarItem(title: Localized.tab_bar_title_favorites, image: #imageLiteral(resourceName: "tab4"), tag: 1)
         tabBarItem.titlePositionAdjustment.vertical = TabBarItemTitleOffset
     }
     

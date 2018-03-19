@@ -12,7 +12,7 @@ final class TextEditingOptionsViewController: UIViewController {
     weak var delegate: TextEditingOptionsViewControllerDelegate?
     
     private lazy var segmentedControl: UISegmentedControl = {
-        let editingOptions = [Localized("text_editing_options_paste")]
+        let editingOptions = [Localized.text_editing_options_paste]
         let attributes: [NSAttributedStringKey: Any] = [.font: Theme.light(size: 14), .foregroundColor: Theme.lightTextColor]
         
         let view = UISegmentedControl(items: editingOptions)

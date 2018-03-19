@@ -58,7 +58,7 @@ final class GroupInfoViewModel {
 
         let participantsSectionData = setupParticipantsSection()
 
-        let leaveGroupCellData = TableCellData(title: Localized("group_info_leave_group_title"))
+        let leaveGroupCellData = TableCellData(title: Localized.group_info_leave_group_title)
         leaveGroupCellData.tag = GroupItemType.exitGroup.rawValue
 
         let exitGroupSectionData = TableSectionData(cellsData: [leaveGroupCellData])
@@ -67,7 +67,7 @@ final class GroupInfoViewModel {
     }
 
     private func setupParticipantsSection() -> TableSectionData {
-        let addParticipantsData = TableCellData(title: Localized("new_group_add_participants_action_title"))
+        let addParticipantsData = TableCellData(title: Localized.new_group_add_participants_action_title)
         addParticipantsData.tag = GroupItemType.addParticipant.rawValue
 
         var participantsCellData: [TableCellData] = [addParticipantsData]
@@ -147,15 +147,15 @@ extension GroupInfoViewModel: GroupViewModelProtocol {
 
     var rightBarButtonSelector: Selector { return #selector(updateGroup) }
 
-    var viewControllerTitle: String { return Localized("group_info_title") }
-    var rightBarButtonTitle: String { return Localized("update_group_button_title") }
-    var imagePickerTitle: String { return Localized("image-picker-select-source-title") }
-    var imagePickerCameraActionTitle: String { return Localized("image-picker-camera-action-title") }
-    var imagePickerLibraryActionTitle: String { return Localized("image-picker-library-action-title") }
-    var imagePickerCancelActionTitle: String { return Localized("cancel_action_title") }
+    var viewControllerTitle: String { return Localized.group_info_title }
+    var rightBarButtonTitle: String { return Localized.update_group_button_title }
+    var imagePickerTitle: String { return Localized.image_picker_select_source_title }
+    var imagePickerCameraActionTitle: String { return Localized.image_picker_camera_action_title }
+    var imagePickerLibraryActionTitle: String { return Localized.image_picker_library_action_title }
+    var imagePickerCancelActionTitle: String { return Localized.cancel_action_title }
 
-    var errorAlertTitle: String { return Localized("error_title") }
-    var errorAlertMessage: String { return Localized("toshi_generic_error") }
+    var errorAlertTitle: String { return Localized.error_title }
+    var errorAlertMessage: String { return Localized.toshi_generic_error }
 
     var isDoneButtonEnabled: Bool { return groupInfo.title.count > 0 }
 

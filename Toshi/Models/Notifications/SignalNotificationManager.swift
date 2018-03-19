@@ -34,7 +34,7 @@ class SignalNotificationManager: NSObject, NotificationsProtocol {
             if let body = incomingMessage.body, let sofa = SofaWrapper.wrapper(content: body) as? SofaMessage {
                 content.body = sofa.body
             } else {
-                content.body = Localized("APN_Message")
+                content.body = Localized.APN_Message
             }
             
             content.sound = UNNotificationSound(named: "PN.m4a")

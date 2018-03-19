@@ -188,7 +188,7 @@ final class DappsDataSource {
                     var items = category.dapps.map { DappsDataSourceItem(type: .dappFront, dapp: $0) }
 
                     if index == frontPage.categories.count - 1 {
-                        items.append(DappsDataSourceItem(type: .seeAll, title: Localized("dapps-see-all-button-title")))
+                        items.append(DappsDataSourceItem(type: .seeAll, title: Localized.dapps_see_all_button_title))
                     }
 
                     fetchedDappsSections.append(DappsDataSourceSection(name: frontPage.categoriesInfo[category.categoryId], categoryId: category.categoryId, items: items))
@@ -241,7 +241,7 @@ final class DappsDataSource {
                     return DappsDataSourceItem(type: .dappSearched, dapp: dapp)
                 }), !items.isEmpty {
                     strongSelf.fetchedDappsItems.append(contentsOf: items)
-                    results.append(DappsDataSourceSection(name: Localized("dapps-section-title"), items: strongSelf.fetchedDappsItems))
+                    results.append(DappsDataSourceSection(name: Localized.dapps_section_title, items: strongSelf.fetchedDappsItems))
                 }
 
                 guard !strongOperation.isCancelled else { return }

@@ -196,10 +196,10 @@ final class GroupViewController: UIViewController {
     }
 
     private func presentExitGroupAlert() {
-        let alertController = UIAlertController(title: nil, message: Localized("group_info_leave_confirmation_message"), preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: Localized("cancel_action_title"), style: .cancel, handler: nil))
+        let alertController = UIAlertController(title: nil, message: Localized.group_info_leave_confirmation_message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: Localized.cancel_action_title, style: .cancel, handler: nil))
 
-        let exitAction = UIAlertAction(title: Localized("group_info_leave_action_title"), style: .destructive) { _ in
+        let exitAction = UIAlertAction(title: Localized.group_info_leave_action_title, style: .destructive) { _ in
             self.exitGroup()
         }
 
@@ -220,7 +220,7 @@ final class GroupViewController: UIViewController {
             if success {
                 self?.navigationController?.popToRootViewController(animated: true)
             } else {
-                let alertController = UIAlertController.dismissableAlert(title: Localized("error_title"), message: Localized("group_info_leave_group_failure_message"))
+                let alertController = UIAlertController.dismissableAlert(title: Localized.error_title, message: Localized.group_info_leave_group_failure_message)
                 self?.present(alertController, animated: true, completion: nil)
             }
         })

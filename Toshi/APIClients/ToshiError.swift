@@ -23,8 +23,8 @@ struct ToshiError: Error, CustomStringConvertible {
         return TeapotError(withType: .dataTaskError, description: errorDescription, underlyingError: error)
     }
 
-    static let invalidPayload = ToshiError(withType: .invalidPayload, description: Localized("toshi_error_invalid_payload"))
-    static let invalidResponseJSON = ToshiError(withType: .invalidResponseJSON, description: Localized("toshi_error_invalid_response_json"))
+    static let invalidPayload = ToshiError(withType: .invalidPayload, description: Localized.toshi_error_invalid_payload)
+    static let invalidResponseJSON = ToshiError(withType: .invalidResponseJSON, description: Localized.toshi_error_invalid_response_json)
 
     static func invalidResponseStatus(_ status: Int) -> ToshiError {
         let errorDescription = String(format: NSLocalizedString("teapot_invalid_response_status", bundle: Teapot.localizationBundle, comment: ""), status)
@@ -32,7 +32,7 @@ struct ToshiError: Error, CustomStringConvertible {
         return ToshiError(withType: .invalidResponseStatus, description: errorDescription, responseStatus: status)
     }
 
-    static let genericError = ToshiError(withType: .generic, description: Localized("toshi_generic_error"))
+    static let genericError = ToshiError(withType: .generic, description: Localized.toshi_generic_error)
 
     enum ErrorType: Int {
         case dataTaskError

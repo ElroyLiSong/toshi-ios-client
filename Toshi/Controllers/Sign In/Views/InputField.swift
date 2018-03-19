@@ -45,9 +45,9 @@ class InputField: UIView {
         view.adjustsFontForContentSizeCategory = true
         switch self.type! {
         case .username:
-            view.text = Localized("input_field_username_placeholder")
+            view.text = Localized.input_field_username_placeholder
         case .password:
-            view.text = Localized("input_field_password_placeholder")
+            view.text = Localized.input_field_password_placeholder
         }
         view.textColor = Theme.greyTextColor
         view.textAlignment = .left

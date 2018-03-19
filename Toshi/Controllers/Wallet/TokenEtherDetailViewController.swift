@@ -49,7 +49,7 @@ final class TokenEtherDetailViewController: UIViewController {
 
     private lazy var sendButton: ActionButton = {
         let button = ActionButton(margin: 0, cornerRadius: 4)
-        button.title = Localized("wallet_token_detail_send")
+        button.title = Localized.wallet_token_detail_send
         button.addTarget(self,
                          action: #selector(sendButtonTapped),
                          for: .touchUpInside)
@@ -59,7 +59,7 @@ final class TokenEtherDetailViewController: UIViewController {
 
     private lazy var receiveButton: ActionButton = {
         let button = ActionButton(margin: 0, cornerRadius: 4)
-        button.title = Localized("wallet_token_detail_receive")
+        button.title = Localized.wallet_token_detail_receive
         button.addTarget(self,
                          action: #selector(receiveButtonTapped),
                          for: .touchUpInside)

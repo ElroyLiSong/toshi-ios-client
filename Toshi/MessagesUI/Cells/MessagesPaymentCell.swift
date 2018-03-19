@@ -55,7 +55,7 @@ class MessagesPaymentCell: MessagesBasicCell {
 
     private(set) lazy var approveButton: IconLabelButton = {
         let view = IconLabelButton()
-        view.title = Localized("messages_payment_approve")
+        view.title = Localized.messages_payment_approve
         view.icon = UIImage(named: "approve")?.withRenderingMode(.alwaysTemplate)
         view.color = Theme.tintColor
         view.addTarget(self, action: #selector(approvePayment(_:)), for: .touchUpInside)
@@ -65,7 +65,7 @@ class MessagesPaymentCell: MessagesBasicCell {
 
     private(set) lazy var declineButton: IconLabelButton = {
         let view = IconLabelButton()
-        view.title = Localized("messages_payment_decline")
+        view.title = Localized.messages_payment_decline
         view.icon = UIImage(named: "decline")?.withRenderingMode(.alwaysTemplate)
         view.color = .gray
         view.addTarget(self, action: #selector(declinePayment(_:)), for: .touchUpInside)

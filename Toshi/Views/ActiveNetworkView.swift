@@ -58,7 +58,7 @@ class ActiveNetworkView: UIView {
 
         heightConstraint = heightAnchor.constraint(equalToConstant: 0)
         if !isDefaultNetworkActive {
-            textLabel.text = String(format: Localized("active_network_format"), NetworkSwitcher.shared.activeNetworkLabel)
+            textLabel.text = String(format: Localized.active_network_format, NetworkSwitcher.shared.activeNetworkLabel)
         }
 
         heightConstraint?.isActive = true

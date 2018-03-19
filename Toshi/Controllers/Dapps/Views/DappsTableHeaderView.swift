@@ -64,7 +64,7 @@ final class DappsTableHeaderView: UIView {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = Theme.viewBackgroundColor
-        label.text = Localized("dapps-search-header-title")
+        label.text = Localized.dapps_search_header_title
         label.font = Theme.semibold(size: 20)
         label.textAlignment = .center
 
@@ -85,7 +85,7 @@ final class DappsTableHeaderView: UIView {
         textField.delegate = self
         textField.autocapitalizationType = .none
         textField.autocorrectionType = .no
-        textField.placeholder = Localized("dapps-search-placeholder")
+        textField.placeholder = Localized.dapps_search_placeholder
         textField.borderStyle = .none
         textField.layer.cornerRadius = 5
 
@@ -104,7 +104,7 @@ final class DappsTableHeaderView: UIView {
 
     private lazy var cancelButton: UIButton = {
         let cancelButton = UIButton()
-        cancelButton.setTitle(Localized("cancel_action_title"), for: .normal)
+        cancelButton.setTitle(Localized.cancel_action_title, for: .normal)
         cancelButton.setTitleColor(Theme.tintColor, for: .normal)
         cancelButton.addTarget(self, action: #selector(didTapCancelButton), for: .touchUpInside)
         cancelButton.setContentCompressionResistancePriority(.required, for: .horizontal)

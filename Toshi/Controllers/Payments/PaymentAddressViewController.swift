@@ -30,7 +30,7 @@ class PaymentAddressViewController: UIViewController {
         view.textAlignment = .center
         view.adjustsFontSizeToFitWidth = true
         view.minimumScaleFactor = 0.5
-        view.text = Localized("payment_send_prefix") + "\(value)"
+        view.text = Localized.payment_send_prefix + "\(value)"
 
         return view
     }()
@@ -40,7 +40,7 @@ class PaymentAddressViewController: UIViewController {
         view.font = Theme.preferredRegular()
         view.textAlignment = .center
         view.numberOfLines = 0
-        view.text = Localized("payment_send_description")
+        view.text = Localized.payment_send_description
         view.adjustsFontForContentSizeCategory = true
 
         return view
@@ -54,7 +54,7 @@ class PaymentAddressViewController: UIViewController {
     }()
 
     private lazy var scannerController: ScannerViewController = {
-        let controller = ScannerController(instructions: Localized("qr_scanner_instructions"), types: [.qrCode])
+        let controller = ScannerController(instructions: Localized.qr_scanner_instructions, types: [.qrCode])
         controller.delegate = self
 
         return controller
@@ -76,7 +76,7 @@ class PaymentAddressViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
 
         navigationItem.backBarButtonItem = UIBarButtonItem.back
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: Localized("payment_next_button"), style: .plain, target: self, action: #selector(nextBarButtonTapped(_:)))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: Localized.payment_next_button, style: .plain, target: self, action: #selector(nextBarButtonTapped(_:)))
         navigationItem.rightBarButtonItem?.isEnabled = false
     }
 

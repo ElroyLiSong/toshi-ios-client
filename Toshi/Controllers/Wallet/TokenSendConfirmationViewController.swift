@@ -48,20 +48,20 @@ final class TokenSendConfirmationViewController: UIViewController {
     }()
 
     private lazy var amountSection: SendConfirmationSection = {
-        return SendConfirmationSection(sectionTitle: Localized("wallet_send_confirmation_amount_title"))
+        return SendConfirmationSection(sectionTitle: Localized.wallet_send_confirmation_amount_title)
     }()
 
     private lazy var totalValueSection: SendConfirmationSection = {
-        return SendConfirmationSection(sectionTitle: Localized("wallet_send_confirmation_total_title"), primaryCurrencyBold: true)
+        return SendConfirmationSection(sectionTitle: Localized.wallet_send_confirmation_total_title, primaryCurrencyBold: true)
     }()
 
     private lazy var networkFeesSection: SendConfirmationSection = {
-        return SendConfirmationSection(sectionTitle: Localized("wallet_send_confirmation_fees_title"))
+        return SendConfirmationSection(sectionTitle: Localized.wallet_send_confirmation_fees_title)
     }()
 
     private lazy var recipientHeaderLabel: UILabel = {
         let label = UILabel()
-        label.text = Localized("wallet_send_confirmation_recipient_header")
+        label.text = Localized.wallet_send_confirmation_recipient_header
         label.font = Theme.preferredRegular()
         label.textColor = Theme.darkTextHalfAlpha
 
@@ -79,7 +79,7 @@ final class TokenSendConfirmationViewController: UIViewController {
 
     private lazy var confirmButton: ActionButton = {
         let button = ActionButton(margin: 0)
-        button.title = Localized("confirm_action_title")
+        button.title = Localized.confirm_action_title
         button.isEnabled = false
         button.addTarget(self,
                          action: #selector(confirmButtonTapped),
@@ -162,7 +162,7 @@ final class TokenSendConfirmationViewController: UIViewController {
 
                 if !rawPaymentInfo.sufficientBalance {
                     strongSelf.errorLabel.isHidden = false
-                    strongSelf.errorLabel.text = String(format: Localized("wallet_insuffisient_balance_generic"), rawPaymentInfo.balanceString)
+                    strongSelf.errorLabel.text = String(format: Localized.wallet_insuffisient_balance_generic, rawPaymentInfo.balanceString)
                 }
             }
         }
@@ -249,8 +249,8 @@ final class TokenSendConfirmationViewController: UIViewController {
             guard error == nil else {
                 weakSelf.hud.hide()
 
-                let alert = UIAlertController(title: Localized("transaction_error_message"), message: (error?.description ?? ToshiError.genericError.description), preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: Localized("alert-ok-action-title"), style: .default, handler: { _ in
+                let alert = UIAlertController(title: Localized.transaction_error_message, message: (error?.description ?? ToshiError.genericError.description), preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: Localized.alert_ok_action_title, style: .default, handler: { _ in
                     weakSelf.navigationController?.dismiss(animated: true, completion: nil)
                 }))
 
@@ -259,7 +259,7 @@ final class TokenSendConfirmationViewController: UIViewController {
                 return
             }
 
-            weakSelf.hud.successThenHide(after: 0.3, image: #imageLiteral(resourceName: "success_check"), text: Localized("wallet_send_confirmation_success_message"), completion: {
+            weakSelf.hud.successThenHide(after: 0.3, image: #imageLiteral(resourceName: "success_check"), text: Localized.wallet_send_confirmation_success_message, completion: {
 
                 weakSelf.navigationController?.dismiss(animated: false, completion: {
                     weakSelf.delegate?.tokenSendConfirmationControllerDidFinish(weakSelf)

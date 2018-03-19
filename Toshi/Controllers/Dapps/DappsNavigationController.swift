@@ -45,7 +45,7 @@ final class DappsNavigationController: UINavigationController {
     }
     
     func configureTabBarItem() {
-        tabBarItem = UITabBarItem(title: Localized("tab_bar_title_dapps"), image: #imageLiteral(resourceName: "tab1"), tag: 0)
+        tabBarItem = UITabBarItem(title: Localized.tab_bar_title_dapps, image: #imageLiteral(resourceName: "tab1"), tag: 0)
         tabBarItem.titlePositionAdjustment.vertical = TabBarItemTitleOffset
     }
 

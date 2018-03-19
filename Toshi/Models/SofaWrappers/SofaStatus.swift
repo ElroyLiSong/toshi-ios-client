@@ -62,23 +62,23 @@ final class SofaStatus: SofaWrapper {
 
         switch statusType {
         case .created:
-            return attributedString(for: Localized("status_type_create"), with: [""])
+            return attributedString(for: Localized.status_type_create, with: [""])
         case .becameMember:
-            return attributedString(for: Localized("status_type_became_member"), with: [subject])
+            return attributedString(for: Localized.status_type_became_member, with: [subject])
         case .leave:
-            return attributedString(for: Localized("status_type_leave"), with: [subject])
+            return attributedString(for: Localized.status_type_leave, with: [subject])
         case .added:
             guard let object = object else { return nil }
-            return attributedString(for: Localized("status_type_added"), with: [subject, object])
+            return attributedString(for: Localized.status_type_added, with: [subject, object])
         case .changePhoto:
-            return attributedString(for: Localized("status_type_change_photo"), with: [subject])
+            return attributedString(for: Localized.status_type_change_photo, with: [subject])
         case .rename:
             guard let object = object else { return nil }
-            return attributedString(for: Localized("status_type_rename"), with: [subject, object])
+            return attributedString(for: Localized.status_type_rename, with: [subject, object])
         case .setToPublic:
-            return attributedString(for: Localized("status_type_make_public"), with: [subject])
+            return attributedString(for: Localized.status_type_make_public, with: [subject])
         case .setToPrivate:
-            return attributedString(for: Localized("status_type_make_private"), with: [subject])
+            return attributedString(for: Localized.status_type_make_private, with: [subject])
         default:
             return nil
         }

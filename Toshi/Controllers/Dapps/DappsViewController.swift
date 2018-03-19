@@ -26,13 +26,13 @@ enum BrowseContentSection: Int {
     var title: String {
         switch self {
         case .topRatedApps:
-            return Localized("browse-top-rated-apps")
+            return Localized.browse_top_rated_apps
         case .featuredDapps:
-            return Localized("browse-featured-dapps")
+            return Localized.browse_featured_dapps
         case .topRatedPublicUsers:
-            return Localized("browse-top-rated-public-users")
+            return Localized.browse_top_rated_public_users
         case .latestPublicUsers:
-            return Localized("browse-latest-public-users")
+            return Localized.browse_latest_public_users
         }
     }
 }
@@ -122,7 +122,7 @@ final class DappsViewController: UIViewController {
         button.addTarget(self,
                          action: #selector(didTapSeeAllDappsButton(_:)),
                          for: .touchUpInside)
-        button.title = Localized("dapps-see-all-button-title")
+        button.title = Localized.dapps_see_all_button_title
 
         return button
     }()
@@ -220,7 +220,7 @@ final class DappsViewController: UIViewController {
     }
 
     @objc private func didTapSeeAllDappsButton(_ button: UIButton) {
-        let categoryDappsViewController = DappsListViewController(name: Localized("dapps-all-list-title"))
+        let categoryDappsViewController = DappsListViewController(name: Localized.dapps_all_list_title)
         Navigator.push(categoryDappsViewController)
     }
 }
@@ -271,7 +271,7 @@ extension DappsViewController: UITableViewDataSource {
 
             cell.selectionStyle = .none
 
-            let googleText = " - \(Localized("dapps-search-with-google-section-title"))"
+            let googleText = " - \(Localized.dapps_search_with_google_section_title)"
             let text = (item.displayTitle ?? "") + googleText
             let attributedString = NSMutableAttributedString(string: text)
 
@@ -321,7 +321,7 @@ extension DappsViewController: UITableViewDataSource {
         let header = DappsSectionHeaderView(delegate: self)
         header.backgroundColor = dataSource.mode == .frontPage ? Theme.viewBackgroundColor : Theme.lighterGreyTextColor
         header.titleLabel.textColor = dataSource.mode == .frontPage ? Theme.greyTextColor : Theme.lightGreyTextColor
-        header.actionButton.setTitle(Localized("dapps-see-more-button-title"), for: .normal)
+        header.actionButton.setTitle(Localized.dapps_see_more_button_title, for: .normal)
         header.tag = section
 
         header.titleLabel.text = sectionData.name?.uppercased()

@@ -533,15 +533,15 @@ extension ChatViewController: UITableViewDelegate {
         
         if let signalMessage = message.signalMessage as? TSOutgoingMessage, signalMessage.messageState == .unsent {
             
-            let delete = UIAlertAction(title: Localized("messages_sent_error_action_delete"), style: .destructive, handler: { _ in
+            let delete = UIAlertAction(title: Localized.messages_sent_error_action_delete, style: .destructive, handler: { _ in
                 self.viewModel.deleteItemAt(indexPath)
             })
             
-            let resend = UIAlertAction(title: Localized("messages_sent_error_action_resend"), style: .destructive, handler: { _ in
+            let resend = UIAlertAction(title: Localized.messages_sent_error_action_resend, style: .destructive, handler: { _ in
                 self.viewModel.resendItemAt(indexPath)
             })
             
-            let cancel = UIAlertAction(title: Localized("cancel_action_title"), style: .cancel)
+            let cancel = UIAlertAction(title: Localized.cancel_action_title, style: .cancel)
             
             let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
             actionSheet.addAction(resend)
@@ -821,7 +821,7 @@ extension ChatViewController: ChatInteractorOutput {
     func didCatchError(_ message: String) {
         hideActivityIndicator()
 
-        let alert = UIAlertController.dismissableAlert(title: Localized("transaction_error_message"), message: message)
+        let alert = UIAlertController.dismissableAlert(title: Localized.transaction_error_message, message: message)
         Navigator.presentModally(alert)
     }
 
@@ -851,16 +851,16 @@ extension ChatViewController: ChatInputTextPanelDelegate {
 
         view.endEditing(true)
 
-        let pickerTypeAlertController = UIAlertController(title: Localized("image-picker-select-source-title"), message: nil, preferredStyle: .actionSheet)
-        let cameraAction = UIAlertAction(title: Localized("image-picker-camera-action-title"), style: .default) { _ in
+        let pickerTypeAlertController = UIAlertController(title: Localized.image_picker_select_source_title, message: nil, preferredStyle: .actionSheet)
+        let cameraAction = UIAlertAction(title: Localized.image_picker_camera_action_title, style: .default) { _ in
             self.presentImagePicker(sourceType: .camera)
         }
 
-        let libraryAction = UIAlertAction(title: Localized("image-picker-library-action-title"), style: .default) { _ in
+        let libraryAction = UIAlertAction(title: Localized.image_picker_library_action_title, style: .default) { _ in
             self.presentImagePicker(sourceType: .photoLibrary)
         }
 
-        let cancelAction = UIAlertAction(title: Localized("cancel_action_title"), style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: Localized.cancel_action_title, style: .cancel, handler: nil)
 
         pickerTypeAlertController.addAction(cameraAction)
         pickerTypeAlertController.addAction(libraryAction)

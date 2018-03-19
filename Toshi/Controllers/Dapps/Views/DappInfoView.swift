@@ -92,7 +92,7 @@ final class DappInfoView: UIView {
 
     private lazy var openButton: ActionButton = {
         let button = ActionButton(margin: .defaultMargin)
-        button.title = Localized("dapp_button_enter")
+        button.title = Localized.dapp_button_enter
         button.addTarget(self,
                          action: #selector(didTapOpenButton(_:)),
                          for: .touchUpInside)

@@ -26,13 +26,13 @@ public enum ProfilesViewControllerType {
     var title: String {
         switch self {
         case .favorites:
-            return Localized("profiles_navigation_title_favorites")
+            return Localized.profiles_navigation_title_favorites
         case .newChat:
-            return Localized("profiles_navigation_title_new_chat")
+            return Localized.profiles_navigation_title_new_chat
         case .newGroupChat:
-            return Localized("profiles_navigation_title_new_group_chat")
+            return Localized.profiles_navigation_title_new_group_chat
         case .updateGroupChat:
-            return Localized("profiles_navigation_title_update_group_chat")
+            return Localized.profiles_navigation_title_update_group_chat
         }
     }
 }
@@ -52,7 +52,7 @@ final class ProfilesViewController: UIViewController {
 
     private(set) weak var output: ProfilesListCompletionOutput?
 
-    let emptyView = EmptyView(title: Localized("favorites_empty_title"), description: Localized("favorites_empty_description"), buttonTitle: Localized("invite_friends_action_title"))
+    let emptyView = EmptyView(title: Localized.favorites_empty_title, description: Localized.favorites_empty_description, buttonTitle: Localized.invite_friends_action_title)
     var shouldShowEmptyView: Bool { return type == .favorites }
 
     var scrollView: UIScrollView {
@@ -107,11 +107,11 @@ final class ProfilesViewController: UIViewController {
 
         switch type {
         case .favorites:
-            controller.searchBar.placeholder = Localized("profiles_search_favorites_placeholder")
+            controller.searchBar.placeholder = Localized.profiles_search_favorites_placeholder
         case .newChat,
              .newGroupChat,
              .updateGroupChat:
-            controller.searchBar.placeholder = Localized("profiles_search_users_placeholder")
+            controller.searchBar.placeholder = Localized.profiles_search_users_placeholder
         }
 
         guard #available(iOS 11.0, *) else {
@@ -312,7 +312,7 @@ final class ProfilesViewController: UIViewController {
     // MARK: - Action Handling
     
     @objc func emptyViewButtonPressed(_ button: ActionButton) {
-        shareWithSystemSheet(item: Localized("sharing_action_item"))
+        shareWithSystemSheet(item: Localized.sharing_action_item)
     }
 
     // MARK: - Action Handling
@@ -329,22 +329,22 @@ final class ProfilesViewController: UIViewController {
     }
     
     @objc private func didTapAdd(_ button: UIBarButtonItem) {
-        let addContactSheet = UIAlertController(title: Localized("favorites_add_title"), message: nil, preferredStyle: .actionSheet)
+        let addContactSheet = UIAlertController(title: Localized.favorites_add_title, message: nil, preferredStyle: .actionSheet)
         
-        addContactSheet.addAction(UIAlertAction(title: Localized("favorites_add_by_username"), style: .default, handler: { _ in
+        addContactSheet.addAction(UIAlertAction(title: Localized.favorites_add_by_username, style: .default, handler: { _ in
             self.searchController.searchBar.becomeFirstResponder()
         }))
         
-        addContactSheet.addAction(UIAlertAction(title: Localized("invite_friends_action_title"), style: .default, handler: { _ in
+        addContactSheet.addAction(UIAlertAction(title: Localized.invite_friends_action_title, style: .default, handler: { _ in
 
-            self.shareWithSystemSheet(item: Localized("sharing_action_item"))
+            self.shareWithSystemSheet(item: Localized.sharing_action_item)
         }))
         
-        addContactSheet.addAction(UIAlertAction(title: Localized("favorites_scan_code"), style: .default, handler: { _ in
+        addContactSheet.addAction(UIAlertAction(title: Localized.favorites_scan_code, style: .default, handler: { _ in
             Navigator.presentScanner()
         }))
 
-        addContactSheet.addAction(UIAlertAction(title: Localized("cancel_action_title"), style: .cancel, handler: nil))
+        addContactSheet.addAction(UIAlertAction(title: Localized.cancel_action_title, style: .cancel, handler: nil))
         
         addContactSheet.view.tintColor = Theme.tintColor
         present(addContactSheet, animated: true)

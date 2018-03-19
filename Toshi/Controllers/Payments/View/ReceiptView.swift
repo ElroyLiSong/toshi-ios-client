@@ -19,21 +19,21 @@ final class ReceiptView: UIStackView {
 
     private lazy var fiatAmountLine: ReceiptLineView = {
         let amountLine = ReceiptLineView()
-        amountLine.setTitle(Localized("confirmation_amount"))
+        amountLine.setTitle(Localized.confirmation_amount)
 
         return amountLine
     }()
 
     private lazy var estimatedNetworkFeesLine: ReceiptLineView = {
         let estimatedNetworkFeesLine = ReceiptLineView()
-        estimatedNetworkFeesLine.setTitle(Localized("confirmation_estimated_network_fees"))
+        estimatedNetworkFeesLine.setTitle(Localized.confirmation_estimated_network_fees)
 
         return estimatedNetworkFeesLine
     }()
 
     private lazy var totalLine: ReceiptLineView = {
         let totalLine = ReceiptLineView()
-        totalLine.setTitle(Localized("confirmation_total"))
+        totalLine.setTitle(Localized.confirmation_total)
 
         return totalLine
     }()

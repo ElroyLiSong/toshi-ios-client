@@ -78,7 +78,7 @@ final class EtherToken: Token {
     init(valueInWei: NSDecimalNumber) {
         wei = valueInWei
 
-        super.init(name: Localized("wallet_ether_name"),
+        super.init(name: Localized.wallet_ether_name,
                    symbol: "ETH",
                    value: wei.toHexString,
                    decimals: 5,

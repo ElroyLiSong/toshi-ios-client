@@ -77,14 +77,14 @@ class EthereumNotificationHandler: NSObject {
     
     private static func handleUnconfirmed(payment sofa: SofaPayment) {
         let content = UNMutableNotificationContent()
-        content.title = Localized("notification_payment_title")
+        content.title = Localized.notification_payment_title
 
         let fiatValueString = EthereumConverter.fiatValueString(forWei: sofa.value, exchangeRate: ExchangeRateClient.exchangeRate)
         let format: String
         if sofa.recipientAddress == TokenUser.current?.paymentAddress {
-            format = Localized("notification_payment_received_message_format")
+            format = Localized.notification_payment_received_message_format
         } else {
-            format = Localized("notification_payment_sent_message_format")
+            format = Localized.notification_payment_sent_message_format
         }
 
         content.body = String(format: format, fiatValueString)

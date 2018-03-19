@@ -24,7 +24,7 @@ class PassphraseVerifyController: UIViewController {
 
     private let navigationBarCompensation: CGFloat = 64
 
-    lazy var textLabel = TextLabel(Localized("passphrase_verify_text"))
+    lazy var textLabel = TextLabel(Localized.passphrase_verify_text)
 
     private lazy var shuffledPassphraseView: PassphraseView = {
         let view = PassphraseView(with: Cereal().mnemonic.words, for: .shuffled)
@@ -51,7 +51,7 @@ class PassphraseVerifyController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
 
-        title = Localized("passphrase_verify_navigation_title")
+        title = Localized.passphrase_verify_navigation_title
         hidesBottomBarWhenPushed = true
     }
 

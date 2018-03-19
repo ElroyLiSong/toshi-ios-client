@@ -34,7 +34,7 @@ class OfflineAlertView: UIView {
         textLabel.adjustsFontSizeToFitWidth = true
         textLabel.minimumScaleFactor = 0.8
 
-        textLabel.text = Localized("offline_alert_message")
+        textLabel.text = Localized.offline_alert_message
 
         return textLabel
     }()

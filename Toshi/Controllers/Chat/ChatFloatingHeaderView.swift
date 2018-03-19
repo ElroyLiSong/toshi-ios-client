@@ -66,7 +66,7 @@ class ChatFloatingHeaderView: UIView {
 
     private(set) lazy var requestButton: UIButton = {
         let button = ChatFloatingHeaderView.button()
-        button.setAttributedTitle(NSAttributedString(string: Localized("chat_request_payment_button_title"), attributes: self.buttonAttributes), for: .normal)
+        button.setAttributedTitle(NSAttributedString(string: Localized.chat_request_payment_button_title, attributes: self.buttonAttributes), for: .normal)
         button.addTarget(self, action: #selector(request(button:)), for: .touchUpInside)
 
         return button
@@ -74,7 +74,7 @@ class ChatFloatingHeaderView: UIView {
 
     private(set) lazy var payButton: UIButton = {
         let button = ChatFloatingHeaderView.button()
-        button.setAttributedTitle(NSAttributedString(string: Localized("chat_pay_button_title"), attributes: self.buttonAttributes), for: .normal)
+        button.setAttributedTitle(NSAttributedString(string: Localized.chat_pay_button_title, attributes: self.buttonAttributes), for: .normal)
         button.addTarget(self, action: #selector(pay(button:)), for: .touchUpInside)
 
         return button

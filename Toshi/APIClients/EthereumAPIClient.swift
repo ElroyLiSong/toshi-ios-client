@@ -79,7 +79,7 @@ final class EthereumAPIClient {
             case .success(let json, _):
                 resultJson = json?.dictionary
             case .failure(_, _, let error):
-                resultError = ToshiError(withTeapotError: error, errorDescription: Localized("payment_error_message"))
+                resultError = ToshiError(withTeapotError: error, errorDescription: Localized.payment_error_message)
                 DLog("\(error)")
             }
 

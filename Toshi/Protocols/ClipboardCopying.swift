@@ -47,7 +47,7 @@ extension ClipboardCopying {
     ///   - message: The message to show in the quick alert. Defaults to a generic message inidcating something was copied to the clipboard.
     ///   - view: The view to show the quick alert in
     func copyStringToClipboard(_ string: String,
-                               thenShowMessage message: String = Localized("clipboard_copied_alert_text"),
+                               thenShowMessage message: String = Localized.clipboard_copied_alert_text,
                                in view: UIView) {
         copyStringToClipboard(string)
 

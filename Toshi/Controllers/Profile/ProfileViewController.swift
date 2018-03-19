@@ -90,7 +90,7 @@ final class ProfileViewController: DisappearingNavBarViewController {
     private lazy var messageUserButton: ActionButton = {
         let button = ActionButton(margin: .defaultMargin)
         button.setButtonStyle(.primary)
-        button.title = Localized("profile_message_button_title")
+        button.title = Localized.profile_message_button_title
         button.addTarget(self, action: #selector(didTapMessageButton), for: .touchUpInside)
         
         return button
@@ -99,7 +99,7 @@ final class ProfileViewController: DisappearingNavBarViewController {
     private lazy var payButton: ActionButton = {
         let button = ActionButton(margin: .defaultMargin)
         button.setButtonStyle(.secondary)
-        button.title = Localized("profile_pay_button_title")
+        button.title = Localized.profile_pay_button_title
         button.addTarget(self, action: #selector(didTapPayButton), for: .touchUpInside)
         
         return button
@@ -108,7 +108,7 @@ final class ProfileViewController: DisappearingNavBarViewController {
     private lazy var editProfileButton: ActionButton = {
         let view = ActionButton(margin: .defaultMargin)
         view.setButtonStyle(.secondary)
-        view.title = Localized("profile_edit_button_title")
+        view.title = Localized.profile_edit_button_title
         view.addTarget(self, action: #selector(didTapEditProfileButton), for: .touchUpInside)
         view.clipsToBounds = true
         
@@ -147,7 +147,7 @@ final class ProfileViewController: DisappearingNavBarViewController {
         let view = UILabel()
         view.font = Theme.preferredFootnote()
         view.textColor = Theme.sectionTitleColor
-        view.text = Localized("profile_reputation_section_header")
+        view.text = Localized.profile_reputation_section_header
         view.adjustsFontForContentSizeCategory = true
         
         return view
@@ -198,7 +198,7 @@ final class ProfileViewController: DisappearingNavBarViewController {
 
         super.init(nibName: nil, bundle: nil)
 
-        title = Localized("profile_title")
+        title = Localized.profile_title
     }
 
     required init?(coder _: NSCoder) {
@@ -213,7 +213,7 @@ final class ProfileViewController: DisappearingNavBarViewController {
         view.backgroundColor = Theme.viewBackgroundColor
 
         if shouldShowMoreButton {
-            navBar.setRightButtonImage(#imageLiteral(resourceName: "more_centered"), accessibilityLabel: Localized("accessibility_more"))
+            navBar.setRightButtonImage(#imageLiteral(resourceName: "more_centered"), accessibilityLabel: Localized.accessibility_more)
         }
         
         if isProfileEditable {
@@ -394,9 +394,10 @@ final class ProfileViewController: DisappearingNavBarViewController {
             rateThisUserButton.height(.defaultButtonHeight)
 
             if isBotProfile {
-                rateThisUserButton.setTitle(Localized("profile_rate_user"), for: .normal)
+                //TODO: Fixme
+                rateThisUserButton.setTitle(Localized.profile_rate_user, for: .normal)
             } else {
-                rateThisUserButton.setTitle(Localized("profile_rate_user"), for: .normal)
+                rateThisUserButton.setTitle(Localized.profile_rate_user, for: .normal)
             }
         } else {
             reputationStackView.addSpacing(.largeInterItemSpacing, after: reputationView.superview!)
@@ -448,7 +449,7 @@ final class ProfileViewController: DisappearingNavBarViewController {
         usernameLabel.text = profile.displayUsername
         
         if isProfileEditable {
-            navBar.setTitle(Localized("profile_me_title"))
+            navBar.setTitle(Localized.profile_me_title)
         } else {
             navBar.setTitle(profile.nameOrDisplayName)
         }
@@ -546,57 +547,57 @@ final class ProfileViewController: DisappearingNavBarViewController {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let currentFavoriteState = isCurrentUserFavorite()
-        let favoriteTitle = isCurrentUserFavorite() ? Localized("profile_unfavorite_action") : Localized("profile_favorite_action")
+        let favoriteTitle = isCurrentUserFavorite() ? Localized.profile_unfavorite_action : Localized.profile_favorite_action
         let favoriteAction = UIAlertAction(title: favoriteTitle, style: .default) { _ in
             self.didSelectFavoriteState(!currentFavoriteState)
         }
         actionSheet.addAction(favoriteAction)
         
         let currentBlockState = profile.isBlocked
-        let blockTitle = currentBlockState ? Localized("unblock_action_title") : Localized("block_action_title")
+        let blockTitle = currentBlockState ? Localized.unblock_action_title : Localized.block_action_title
         let blockAction = UIAlertAction(title: blockTitle, style: .destructive) { [weak self] _ in
             self?.didSelectBlockedState(!currentBlockState)
         }
         actionSheet.addAction(blockAction)
         
-        let reportAction = UIAlertAction(title: Localized("report_action_title"), style: .destructive) { [weak self] _ in
+        let reportAction = UIAlertAction(title: Localized.report_action_title, style: .destructive) { [weak self] _ in
             self?.didSelectReportUser()
         }
         actionSheet.addAction(reportAction)
         
-        actionSheet.addAction(UIAlertAction(title: Localized("cancel_action_title"), style: .cancel))
+        actionSheet.addAction(UIAlertAction(title: Localized.cancel_action_title, style: .cancel))
         
         Navigator.presentModally(actionSheet)
     }
     
     private func presentBlockConfirmationAlert() {
-        let alert = UIAlertController(title: Localized("block_alert_title"), message: Localized("block_alert_message"), preferredStyle: .alert)
+        let alert = UIAlertController(title: Localized.block_alert_title, message: Localized.block_alert_message, preferredStyle: .alert)
         
-        let blockAction = UIAlertAction(title: Localized("block_action_title"), style: .default) { [weak self] _ in
+        let blockAction = UIAlertAction(title: Localized.block_action_title, style: .default) { [weak self] _ in
             self?.blockUser()
         }
         alert.addAction(blockAction)
         
-        alert.addAction(UIAlertAction(title: Localized("cancel_action_title"), style: .cancel))
+        alert.addAction(UIAlertAction(title: Localized.cancel_action_title, style: .cancel))
         
         Navigator.presentModally(alert)
     }
 
     private func presentReportUserFeedbackAlert(_ success: Bool, message: String?) {
         guard success else {
-            let alert = UIAlertController.dismissableAlert(title: Localized("error_title"), message: message)
+            let alert = UIAlertController.dismissableAlert(title: Localized.error_title, message: message)
             Navigator.presentModally(alert)
 
             return
         }
 
-        let alert = UIAlertController.dismissableAlert(title: Localized("report_feedback_alert_title"), message: Localized("report_feedback_alert_message"))
+        let alert = UIAlertController.dismissableAlert(title: Localized.report_feedback_alert_title, message: Localized.report_feedback_alert_message)
         Navigator.presentModally(alert)
     }
     
     private func presentSubmitRatingErrorAlert(error: ToshiError?) {
-        let alert = UIAlertController(title: Localized("error_title"), message: error?.description, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: Localized("alert-ok-action-title"), style: .default))
+        let alert = UIAlertController(title: Localized.error_title, message: error?.description, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: Localized.alert_ok_action_title, style: .default))
         
         Navigator.presentModally(alert)
     }
@@ -614,14 +615,14 @@ final class ProfileViewController: DisappearingNavBarViewController {
     private func blockUser() {
         OWSBlockingManager.shared().addBlockedPhoneNumber(profile.address)
         
-        let alert = UIAlertController.dismissableAlert(title: Localized("block_feedback_alert_title"), message: Localized("block_feedback_alert_message"))
+        let alert = UIAlertController.dismissableAlert(title: Localized.block_feedback_alert_title, message: Localized.block_feedback_alert_message)
         Navigator.presentModally(alert)
     }
     
     private func unblockUser() {
         OWSBlockingManager.shared().removeBlockedPhoneNumber(profile.address)
         
-        let alert = UIAlertController.dismissableAlert(title: Localized("unblock_user_title"), message: Localized("unblock_user_message"))
+        let alert = UIAlertController.dismissableAlert(title: Localized.unblock_user_title, message: Localized.unblock_user_message)
         Navigator.presentModally(alert)
     }
 

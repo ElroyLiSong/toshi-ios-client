@@ -53,7 +53,7 @@ class ChatInputTextPanel: UIView {
         view.layer.borderColor = Theme.borderColor.cgColor
         view.layer.borderWidth = .lineHeight
         view.delegate = self
-        view.placeholder = Localized("chat_input_empty_placeholder")
+        view.placeholder = Localized.chat_input_empty_placeholder
         view.contentInset = UIEdgeInsets(top: 0, left: 11, bottom: 0, right: 0)
         view.font = UIFont.systemFont(ofSize: 16)
         view.internalTextView.textContainerInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 5)

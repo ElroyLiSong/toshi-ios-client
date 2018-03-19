@@ -49,7 +49,7 @@ final class WalletViewController: UIViewController {
     }()
 
     private lazy var tableHeaderView: SegmentedHeaderView = {
-        let walletItemTitles = [Localized("wallet_tokens"), Localized("wallet_collectibles")]
+        let walletItemTitles = [Localized.wallet_tokens, Localized.wallet_collectibles]
         let headerView = SegmentedHeaderView(segmentNames: walletItemTitles, delegate: self)
         headerView.backgroundColor = Theme.viewBackgroundColor
 
@@ -69,7 +69,7 @@ final class WalletViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = Localized("wallet_controller_title")
+        title = Localized.wallet_controller_title
         view.backgroundColor = Theme.lightGrayBackgroundColor
         emptyView.isHidden = true
 

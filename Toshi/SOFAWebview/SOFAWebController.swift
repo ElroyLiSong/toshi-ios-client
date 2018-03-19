@@ -128,7 +128,7 @@ final class SOFAWebController: UIViewController {
         button.tintColor = Theme.tintColor
         button.size(CGSize(width: .defaultButtonHeight, height: .defaultButtonHeight))
 
-        button.accessibilityLabel = Localized("accessibility_close")
+        button.accessibilityLabel = Localized.accessibility_close
         button.addTarget(self,
                          action: #selector(closeButtonTapped),
                          for: .touchUpInside)
@@ -380,7 +380,7 @@ extension SOFAWebController: WKScriptMessageHandler {
             }
 
             DispatchQueue.main.async {
-                self.presentPersonalMessageSignAlert("\(Localized("eth_sign_warning"))\n\n\(messageEncodedString)", callbackId: callbackId, signHandler: { [weak self] returnedCallbackId in
+                self.presentPersonalMessageSignAlert("\(Localized.eth_sign_warning))\n\n\(messageEncodedString)", callbackId: callbackId, signHandler: { [weak self] returnedCallbackId in
 
                     var signature = "0x\(Cereal.shared.signWithWallet(hash: messageEncodedString))"
 
@@ -457,7 +457,7 @@ extension SOFAWebController: WKScriptMessageHandler {
                     let decimalValue = NSDecimalNumber(hexadecimalString: value)
                     let fiatValueString = EthereumConverter.fiatValueString(forWei: decimalValue, exchangeRate: ExchangeRateClient.exchangeRate)
                     let ethValueString = EthereumConverter.ethereumValueString(forWei: decimalValue)
-                    let messageText = String(format: Localized("payment_confirmation_warning_message"), fiatValueString, ethValueString, user?.name ?? to)
+                    let messageText = String(format: Localized.payment_confirmation_warning_message, fiatValueString, ethValueString, user?.name ?? to)
 
                     self?.presentPaymentConfirmation(with: messageText, parameters: parameters, userInfo: userInfo, dappInfo: dappInfo, callbackId: callbackId)
                 })
@@ -528,9 +528,9 @@ extension SOFAWebController: WKScriptMessageHandler {
 
     private func presentPersonalMessageSignAlert(_ message: String, callbackId: String, signHandler: @escaping ((String) -> Void)) {
 
-        let alert = UIAlertController(title: Localized("sign_alert_title"), message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: Localized("cancel_action_title"), style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: Localized("sign_action_title"), style: .default, handler: { _ in
+        let alert = UIAlertController(title: Localized.sign_alert_title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: Localized.cancel_action_title, style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: Localized.sign_action_title, style: .default, handler: { _ in
             signHandler(callbackId)
         }))
 
@@ -604,7 +604,7 @@ extension SOFAWebController: WKUIDelegate {
 
     func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
         let controller = UIAlertController(title: message, message: nil, preferredStyle: .alert)
-        controller.addAction(UIAlertAction(title: Localized("alert-ok-action-title"), style: .default, handler: { _ in
+        controller.addAction(UIAlertAction(title: Localized.alert_ok_action_title, style: .default, handler: { _ in
             completionHandler()
         }))
 
@@ -613,10 +613,10 @@ extension SOFAWebController: WKUIDelegate {
 
     func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Swift.Void) {
         let controller = UIAlertController(title: message, message: nil, preferredStyle: .alert)
-        controller.addAction(UIAlertAction(title: Localized("alert-ok-action-title"), style: .default, handler: { _ in
+        controller.addAction(UIAlertAction(title: Localized.alert_ok_action_title, style: .default, handler: { _ in
             completionHandler(true)
         }))
-        controller.addAction(UIAlertAction(title: Localized("cancel_action_title"), style: .default, handler: { _ in
+        controller.addAction(UIAlertAction(title: Localized.cancel_action_title, style: .default, handler: { _ in
             completionHandler(false)
         }))
 
@@ -630,7 +630,7 @@ extension SOFAWebController: WKUIDelegate {
             textField.text = defaultText
         }
 
-        controller.addAction(UIAlertAction(title: Localized("alert-ok-action-title"), style: .default, handler: { _ in
+        controller.addAction(UIAlertAction(title: Localized.alert_ok_action_title, style: .default, handler: { _ in
             if let text = controller.textFields?.first?.text {
                 completionHandler(text)
             } else {
@@ -638,7 +638,7 @@ extension SOFAWebController: WKUIDelegate {
             }
         }))
 
-        controller.addAction(UIAlertAction(title: Localized("cancel_action_title"), style: .default, handler: { _ in
+        controller.addAction(UIAlertAction(title: Localized.cancel_action_title, style: .default, handler: { _ in
             completionHandler(nil)
         }))
 

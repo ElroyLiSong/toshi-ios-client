@@ -56,10 +56,10 @@ class ProfilesAddedToGroupHeader: UIView {
 
         let toAttributes = [ NSAttributedStringKey.foregroundColor: Theme.mediumTextColor,
                                  NSAttributedStringKey.font: Theme.preferredRegular()]
-        let toAttributedString = NSMutableAttributedString(string: Localized("profiles_add_to_group_prefix"), attributes: toAttributes)
+        let toAttributedString = NSMutableAttributedString(string: Localized.profiles_add_to_group_prefix, attributes: toAttributes)
 
         guard profiles.count > 0 else {
-            let placeholderString = NSAttributedString(string: Localized("profiles_empty_group_placeholder"), attributes: nonNameAttributes)
+            let placeholderString = NSAttributedString(string: Localized.profiles_empty_group_placeholder, attributes: nonNameAttributes)
             toAttributedString.append(placeholderString)
             profilesAddedLabel.attributedText = toAttributedString
             

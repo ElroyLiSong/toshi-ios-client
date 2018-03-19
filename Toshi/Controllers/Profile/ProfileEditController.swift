@@ -19,8 +19,8 @@ import SweetFoundation
 
 class ProfileEditController: UIViewController, KeyboardAdjustable, UINavigationControllerDelegate {
 
-    private static let profileVisibilitySectionTitle = Localized("edit_profile_visibility_section_title")
-    private static let profileVisibilitySectionFooter = Localized("edit_profile_visibility_section_explanation")
+    private static let profileVisibilitySectionTitle = Localized.edit_profile_visibility_section_title
+    private static let profileVisibilitySectionFooter = Localized.edit_profile_visibility_section_explanation
 
     var scrollViewBottomInset: CGFloat = 0.0
 
@@ -60,7 +60,7 @@ class ProfileEditController: UIViewController, KeyboardAdjustable, UINavigationC
     private lazy var changeAvatarButton: UIButton = {
         let view = UIButton(withAutoLayout: true)
 
-        let title = NSAttributedString(string: Localized("edit_profile_change_photo"), attributes: [.foregroundColor: Theme.tintColor, .font: Theme.preferredRegularMedium()])
+        let title = NSAttributedString(string: Localized.edit_profile_change_photo, attributes: [.foregroundColor: Theme.tintColor, .font: Theme.preferredRegularMedium()])
         view.setAttributedTitle(title, for: .normal)
         view.titleLabel?.adjustsFontForContentSizeCategory = true
         view.addTarget(self, action: #selector(updateAvatar), for: .touchUpInside)
@@ -94,7 +94,7 @@ class ProfileEditController: UIViewController, KeyboardAdjustable, UINavigationC
         super.viewDidLoad()
         
         view.backgroundColor = Theme.lightGrayBackgroundColor
-        title = Localized("edit_profile_title")
+        title = Localized.edit_profile_title
 
         guard let user = TokenUser.current else { return }
 
@@ -188,16 +188,16 @@ class ProfileEditController: UIViewController, KeyboardAdjustable, UINavigationC
     }
 
     @objc func updateAvatar() {
-        let pickerTypeAlertController = UIAlertController(title: Localized("image-picker-select-source-title"), message: nil, preferredStyle: .actionSheet)
-        let cameraAction = UIAlertAction(title: Localized("image-picker-camera-action-title"), style: .default) { _ in
+        let pickerTypeAlertController = UIAlertController(title: Localized.image_picker_select_source_title, message: nil, preferredStyle: .actionSheet)
+        let cameraAction = UIAlertAction(title: Localized.image_picker_camera_action_title, style: .default) { _ in
             self.presentImagePicker(sourceType: .camera)
         }
 
-        let libraryAction = UIAlertAction(title: Localized("image-picker-library-action-title"), style: .default) { _ in
+        let libraryAction = UIAlertAction(title: Localized.image_picker_library_action_title, style: .default) { _ in
             self.presentImagePicker(sourceType: .photoLibrary)
         }
 
-        let cancelAction = UIAlertAction(title: Localized("cancel_action_title"), style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: Localized.cancel_action_title, style: .cancel, handler: nil)
 
         pickerTypeAlertController.addAction(cameraAction)
         pickerTypeAlertController.addAction(libraryAction)
@@ -262,7 +262,7 @@ class ProfileEditController: UIViewController, KeyboardAdjustable, UINavigationC
         view.endEditing(true)
 
         if validateUserName(username) == false {
-            let alert = UIAlertController.dismissableAlert(title: Localized("error-alert-title"), message: Localized("invalid-username-alert-message"))
+            let alert = UIAlertController.dismissableAlert(title: Localized.error_alert_title, message: Localized.invalid_username_alert_message)
             Navigator.presentModally(alert)
 
             return
@@ -337,7 +337,7 @@ class ProfileEditController: UIViewController, KeyboardAdjustable, UINavigationC
         if success == true {
             navigationController?.popViewController(animated: true)
         } else {
-            let alert = UIAlertController.dismissableAlert(title: Localized("error_title"), message: message ?? Localized("toshi_generic_error"))
+            let alert = UIAlertController.dismissableAlert(title: Localized.error_title, message: message ?? Localized.toshi_generic_error)
             Navigator.presentModally(alert)
         }
     }

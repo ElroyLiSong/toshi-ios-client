@@ -39,7 +39,7 @@ class NetworkSettingsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = Localized("settings_network_title")
+        title = Localized.settings_network_title
 
         view.addSubview(tableView)
         tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true

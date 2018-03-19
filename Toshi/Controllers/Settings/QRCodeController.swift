@@ -25,12 +25,12 @@ class QRCodeController: UIViewController {
 
     private lazy var qrCodeImageView: UIImageView = UIImageView()
 
-    private lazy var subtitleLabel = TextLabel(Localized("profile_qr_code_subtitle"))
+    private lazy var subtitleLabel = TextLabel(Localized.profile_qr_code_subtitle)
 
     convenience init(for username: String, name: String) {
         self.init(nibName: nil, bundle: nil)
 
-        title = Localized("profile_qr_code_title")
+        title = Localized.profile_qr_code_title
 
         qrCodeImageView.image = QRCodeGenerator.qrCodeImage(for: .addUser(username: username))
     }

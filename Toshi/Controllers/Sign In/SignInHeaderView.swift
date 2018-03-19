@@ -6,7 +6,7 @@ final class SignInHeaderView: UIView {
     
     private lazy var titleLabel: UILabel = {
         let view = UILabel()
-        view.text = Localized("passphrase_sign_in_title")
+        view.text = Localized.passphrase_sign_in_title
         view.textAlignment = .center
         view.textColor = Theme.darkTextColor
         view.font = Theme.preferredTitle1()

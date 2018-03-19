@@ -26,7 +26,7 @@ final class RecentViewController: SweetTableController, Emptiable {
         return dataSource
     }()
 
-    let emptyView = EmptyView(title: Localized("chats_empty_title"), description: Localized("chats_empty_description"), buttonTitle: Localized("invite_friends_action_title"))
+    let emptyView = EmptyView(title: Localized.chats_empty_title, description: Localized.chats_empty_description, buttonTitle: Localized.invite_friends_action_title)
 
     private var chatAPIClient: ChatAPIClient {
         return ChatAPIClient.shared
@@ -66,7 +66,7 @@ final class RecentViewController: SweetTableController, Emptiable {
     }
 
     @objc func emptyViewButtonPressed(_ button: ActionButton) {
-        shareWithSystemSheet(item: Localized("share_copy"))
+        shareWithSystemSheet(item: Localized.share_copy)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -111,7 +111,7 @@ final class RecentViewController: SweetTableController, Emptiable {
         var cellData: TableCellData
         var accessoryType: UITableViewCellAccessoryType
 
-        let requestsTitle = Localized("messages_requests_title")
+        let requestsTitle = Localized.messages_requests_title
         let requestsSubtitle = LocalizedPlural("message_requests_description", for: dataSource.unacceptedThreadsCount)
         let firstImage = firstUnacceptedThread.avatar()
 
@@ -181,7 +181,7 @@ extension RecentViewController: UITableViewDataSource {
             return nil
         }
 
-        return Localized("recent_messages_section_header_title")
+        return Localized.recent_messages_section_header_title
     }
 
     func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -68,9 +68,9 @@ final class SendTokenViewController: UIViewController {
     }
 
     private func showTransactionLeaveAlert() {
-        let alertController = UIAlertController(title: Localized("wallet_transaction_leave_alert_message"), message: nil, preferredStyle: .alert)
-        let stayAction = UIAlertAction(title: Localized("wallet_transaction_leave_cancel_action"), style: .default, handler: nil)
-        let leaveAction = UIAlertAction(title: Localized("wallet_transaction_leave_confirm_action"), style: .default) { _ in
+        let alertController = UIAlertController(title: Localized.wallet_transaction_leave_alert_message, message: nil, preferredStyle: .alert)
+        let stayAction = UIAlertAction(title: Localized.wallet_transaction_leave_cancel_action, style: .default, handler: nil)
+        let leaveAction = UIAlertAction(title: Localized.wallet_transaction_leave_confirm_action, style: .default) { _ in
             self.dismiss(animated: true, completion: nil)
         }
 
@@ -85,7 +85,7 @@ final class SendTokenViewController: UIViewController {
 extension SendTokenViewController: SendTokenViewConfiguratorDelegate {
 
     func didReceiveScanEvent(_ configurator: SendTokenViewConfigurator) {
-        let controller = ScannerController(instructions: Localized("qr_scanner_instructions"), types: [.qrCode])
+        let controller = ScannerController(instructions: Localized.qr_scanner_instructions, types: [.qrCode])
         controller.delegate = self
 
         present(controller, animated: true, completion: nil)
@@ -119,11 +119,11 @@ extension SendTokenViewController: ScannerViewControllerDelegate {
                     self?.configurator.updateDestinationAddress(to: address)
                 })
             default:
-                let alert = UIAlertController(title: Localized("wallet_not_an_address_message"), message: nil, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: Localized("alert-ok-action-title"), style: .default, handler: { _ in
+                let alert = UIAlertController(title: Localized.wallet_not_an_address_message, message: nil, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: Localized.alert_ok_action_title, style: .default, handler: { _ in
                     controller.startScanning()
                 }))
-                alert.addAction(UIAlertAction(title: Localized("cancel_action_title"), style: .cancel, handler: { _ in
+                alert.addAction(UIAlertAction(title: Localized.cancel_action_title, style: .cancel, handler: { _ in
                     controller.startScanning()
                 }))
                 Navigator.presentModally(alert)

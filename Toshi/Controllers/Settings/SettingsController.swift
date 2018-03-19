@@ -46,13 +46,13 @@ class SettingsController: UIViewController {
         var headerTitle: String? {
             switch self {
             case .profile:
-                return Localized("settings_header_profile")
+                return Localized.settings_header_profile
             case .balance:
-                return Localized("settings_header_balance")
+                return Localized.settings_header_balance
             case .security:
-                return Localized("settings_header_security")
+                return Localized.settings_header_security
             case .settings:
-                return Localized("settings_header_settings")
+                return Localized.settings_header_settings
             }
         }
 
@@ -135,7 +135,7 @@ class SettingsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = Localized("settings_navigation_title")
+        title = Localized.settings_navigation_title
 
         view.addSubview(tableView)
         tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
@@ -191,8 +191,8 @@ class SettingsController: UIViewController {
 
     private func handleSignOut() {
         guard let currentUser = TokenUser.current else {
-            let alert = UIAlertController(title: Localized("settings_signout_error_title"), message: Localized("settings_signout_error_message"), preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: Localized("settings_signout_action_ok"), style: .default, handler: { _ in
+            let alert = UIAlertController(title: Localized.settings_signout_error_title, message: Localized.settings_signout_error_message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: Localized.settings_signout_action_ok, style: .default, handler: { _ in
                 fatalError()
             }))
             Navigator.presentModally(alert)
@@ -212,22 +212,22 @@ class SettingsController: UIViewController {
         var alert: UIAlertController
 
         if self.isAccountSecured {
-            alert = UIAlertController(title: Localized("settings_signout_insecure_title"), message: Localized("settings_signout_insecure_message"), preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: Localized("cancel_action_title"), style: .cancel))
+            alert = UIAlertController(title: Localized.settings_signout_insecure_title, message: Localized.settings_signout_insecure_message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: Localized.cancel_action_title, style: .cancel))
 
-            alert.addAction(UIAlertAction(title: Localized("settings_signout_action_signout"), style: .destructive) { _ in
+            alert.addAction(UIAlertAction(title: Localized.settings_signout_action_signout, style: .destructive) { _ in
                 SessionManager.shared.signOutUser()
             })
         } else if balance == .zero {
-            alert = UIAlertController(title: Localized("settings_signout_nofunds_title"), message: Localized("settings_signout_nofunds_message"), preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: Localized("cancel_action_title"), style: .cancel))
+            alert = UIAlertController(title: Localized.settings_signout_nofunds_title, message: Localized.settings_signout_nofunds_message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: Localized.cancel_action_title, style: .cancel))
 
-            alert.addAction(UIAlertAction(title: Localized("settings_signout_action_delete"), style: .destructive) { _ in
+            alert.addAction(UIAlertAction(title: Localized.settings_signout_action_delete, style: .destructive) { _ in
                 SessionManager.shared.signOutUser()
             })
         } else {
-            alert = UIAlertController(title: Localized("settings_signout_stepsneeded_title"), message: Localized("settings_signout_stepsneeded_message"), preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: Localized("settings_signout_action_ok"), style: .cancel))
+            alert = UIAlertController(title: Localized.settings_signout_stepsneeded_title, message: Localized.settings_signout_stepsneeded_message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: Localized.settings_signout_action_ok, style: .cancel))
         }
 
         alert.view.tintColor = Theme.tintColor
@@ -279,7 +279,7 @@ extension SettingsController: UITableViewDataSource {
         case .profile:
             setupProfileCell(cell)
         case .qrCode:
-            cell.textLabel?.text = Localized("settings_cell_qr")
+            cell.textLabel?.text = Localized.settings_cell_qr
             cell.textLabel?.textColor = Theme.darkTextColor
             cell.accessoryType = .disclosureIndicator
         case .balance:
@@ -300,16 +300,16 @@ extension SettingsController: UITableViewDataSource {
                 cell.accessoryType = .disclosureIndicator
             }
         case .security:
-            cell.textLabel?.text = Localized("settings_cell_passphrase")
+            cell.textLabel?.text = Localized.settings_cell_passphrase
             cell.accessoryType = .disclosureIndicator
         case .localCurrency:
-            cell.textLabel?.text = Localized("Local currency")
+            cell.textLabel?.text = Localized.settings_cell_local_currency
             cell.accessoryType = .disclosureIndicator
         case .advanced:
-            cell.textLabel?.text = Localized("settings_cell_advanced")
+            cell.textLabel?.text = Localized.settings_cell_advanced
             cell.accessoryType = .disclosureIndicator
         case .signOut:
-            cell.textLabel?.text = Localized("settings_cell_signout")
+            cell.textLabel?.text = Localized.settings_cell_signout
             cell.textLabel?.textColor = Theme.errorColor
             cell.accessoryType = .none
         }
@@ -372,7 +372,7 @@ extension SettingsController: UITableViewDelegate {
 
         switch sectionItem {
         case .security:
-            let view = SettingsSectionHeader(title: Localized("settings_header_security"), error: Localized("settings_header_security_text"))
+            let view = SettingsSectionHeader(title: Localized.settings_header_security, error: Localized.settings_header_security_text)
             view.setErrorHidden(isAccountSecured)
 
             return view

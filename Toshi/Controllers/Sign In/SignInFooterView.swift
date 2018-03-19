@@ -29,7 +29,7 @@ final class SignInFooterView: UIView {
 
     private(set) lazy var explanationButton: UIButton = {
         let view = UIButton()
-        view.setTitle(Localized("passphrase_sign_in_explanation_title"), for: .normal)
+        view.setTitle(Localized.passphrase_sign_in_explanation_title, for: .normal)
         view.setTitleColor(Theme.greyTextColor, for: .normal)
 
         return view
@@ -39,7 +39,7 @@ final class SignInFooterView: UIView {
         let remaining = SignInViewController.maxItemCount - numberOfMatches
         
         if remaining == 0 {
-            return Localized("passphrase_sign_in_button")
+            return Localized.passphrase_sign_in_button
         } else {
             return LocalizedPlural("passphrase_sign_in_button_placeholder", for: remaining)
         }
