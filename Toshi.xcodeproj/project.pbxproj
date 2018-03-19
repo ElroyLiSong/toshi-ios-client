@@ -4724,7 +4724,6 @@
 					"$(inherited)",
 					"$(SRCROOT)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Token",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -4767,7 +4766,6 @@
 					"$(inherited)",
 					"$(SRCROOT)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Token",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -4984,7 +4982,6 @@
 					"$(inherited)",
 					"$(SRCROOT)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Token",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -5035,7 +5032,6 @@
 					"$(inherited)",
 					"$(SRCROOT)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Token",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -5079,7 +5075,6 @@
 					"$(inherited)",
 					"$(SRCROOT)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Token",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -5123,7 +5118,6 @@
 					"$(inherited)",
 					"$(SRCROOT)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Token",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
