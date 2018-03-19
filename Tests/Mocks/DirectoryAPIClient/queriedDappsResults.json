@@ -7,7 +7,7 @@
         "url": "https://axieinfinity.com/#",
         "description": "Axie Infinity is a game about collecting and raising fantasy creatures called Axie, on the Ethereum platform.",
         "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1729809212487238681_4bfc03.jpg",
-        "cover": null,
+        "cover": "http://fake-cover-url.com",
         "categories": [
           20
         ]
@@ -18,7 +18,7 @@
         "url": "https://beta.cent.co/",
         "description": "Give wisdom, get money. Ask a question and offer a bounty for the best answers. The userbase then votes to determine which answers receive that bounty.",
         "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1673246598739526658_613d88.png",
-        "cover": null,
+        "cover": "http://gooogle.com",
         "categories": [
           40
         ]
@@ -29,86 +29,9 @@
         "url": "https://chainmonsters.io/",
         "description": "ChainMonsters is a 100% blockchain based monster collectible game. Every action you take, every ChainMonster you catch will be reflected in the game and on blockchain itself.",
         "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1704426417141318665_393169.png",
-        "cover": null,
+        "cover": "http://other-url.nl",
         "categories": [
           20
-        ]
-      },
-      {
-        "dapp_id": 1710550109369926672,
-        "name": "Crypto Celebrities",
-        "url": "https://www.cryptocelebrities.co/",
-        "description": "Collect one-of-a-kind celebrity smart contracts",
-        "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1710550109369926672_73effb.png",
-        "cover": null,
-        "categories": [
-          20
-        ]
-      },
-      {
-        "dapp_id": 1729791864845894679,
-        "name": "CryptoCribs",
-        "url": "https://www.cryptocribs.com/",
-        "description": "CryptoCribs is a home-sharing platform built for and by the global crypto community. It allows crypto enthusiasts from around the globe to meet like-minded individuals, share their homes and exchange ideas. Travel the world, pay in crypto. ",
-        "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1729791864845894679_9788fd.png",
-        "cover": null,
-        "categories": [
-          30
-        ]
-      },
-      {
-        "dapp_id": 1710548330985030671,
-        "name": "CryptoFighters",
-        "url": "https://cryptofighters.io/",
-        "description": "CryptoFighters is a game centred around cryptographically unique collectible fighters on the Ethereum blockchain. Collect, battle and level up your fighters to win new fighters!",
-        "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1710548330985030671_0bb1e3.png",
-        "cover": null,
-        "categories": [
-          20
-        ]
-      },
-      {
-        "dapp_id": 1695885715289670663,
-        "name": "Crypto High Score",
-        "url": "https://www.cryptohighscore.co",
-        "description": "The first high score leaderboard on the blockchain. Pay your way to the top of the immutable, irrefutable global rankings.",
-        "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1695885715289670663_ca5ba0.png",
-        "cover": null,
-        "categories": [
-          20
-        ]
-      },
-      {
-        "dapp_id": 1673246900729414660,
-        "name": "Cryptokitties",
-        "url": "https://www.cryptokitties.co/",
-        "description": "CryptoKitties is a game centered around breedable, collectible, and oh-so-adorable creatures we call CryptoKitties! Each cat is one-of-a-kind and 100% owned by you; it cannot be replicated, taken away, or destroyed.",
-        "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1673246900729414660_3ac912.png",
-        "cover": null,
-        "categories": [
-          20
-        ]
-      },
-      {
-        "dapp_id": 1674821140461126663,
-        "name": "CryptoPunks",
-        "url": "https://www.larvalabs.com/cryptopunks",
-        "description": "10,000 unique collectible characters with proof of ownership stored on the Ethereum blockchain.",
-        "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1674821140461126663_c9007c.jpg",
-        "cover": null,
-        "categories": [
-          20
-        ]
-      },
-      {
-        "dapp_id": 1715336347104838676,
-        "name": "Crypto Speech",
-        "url": "http://cryptospeech.com/",
-        "description": "Decentralized, Twitter-style messages stored for eternity",
-        "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1715336347104838676_2649b0.png",
-        "cover": null,
-        "categories": [
-          40
         ]
       }
     ],

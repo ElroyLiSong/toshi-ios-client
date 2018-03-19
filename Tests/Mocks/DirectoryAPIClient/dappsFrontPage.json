@@ -9,7 +9,7 @@
           "url": "https://app.ercdex.com/",
           "description": "Trustless\u00a0trading has arrived on Ethereum. No need to deposit your tokens or create an account - trade ERC20 tokens directly from your wallet.",
           "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1699282069730886664_543c99.png",
-          "cover": null,
+          "cover": "http://fake.com",
           "categories": [
             10
           ]
@@ -25,7 +25,7 @@
           "url": "https://www.cryptokitties.co/",
           "description": "CryptoKitties is a game centered around breedable, collectible, and oh-so-adorable creatures we call CryptoKitties! Each cat is one-of-a-kind and 100% owned by you; it cannot be replicated, taken away, or destroyed.",
           "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1673246900729414660_3ac912.png",
-          "cover": null,
+          "cover": "http://goooogle.nl",
           "categories": [
             20
           ]
@@ -36,7 +36,7 @@
           "url": "https://etherbots.io/",
           "description": "A decentralized Robot Wars game for the Ethereum blockchain.",
           "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1708349878154822668_ecda6e.jpg",
-          "cover": null,
+          "cover": "http://cover.up",
           "categories": [
             20
           ]
@@ -47,7 +47,7 @@
           "url": "https://ethercraft.io/",
           "description": "A decentralized RPG running on the Ethereum blockchain.",
           "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1708333788804678667_944085.png",
-          "cover": null,
+          "cover": "http://url.url",
           "categories": [
             20
           ]
@@ -58,7 +58,7 @@
           "url": "https://www.etheremon.com/",
           "description": "A decentralized application built on the Ethereum network to simulate a world of monsters where you can capture, evolve a monster to defeat others.",
           "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1708300997736006666_00dfcb.png",
-          "cover": null,
+          "cover": "http://fake-cover-url.com",
           "categories": [
             20
           ]
@@ -74,7 +74,7 @@
           "url": "https://www.cryptocribs.com/",
           "description": "CryptoCribs is a home-sharing platform built for and by the global crypto community. It allows crypto enthusiasts from around the globe to meet like-minded individuals, share their homes and exchange ideas. Travel the world, pay in crypto. ",
           "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1729791864845894679_9788fd.png",
-          "cover": null,
+          "cover": "http://other-url.nl",
           "categories": [
             30
           ]
@@ -85,7 +85,7 @@
           "url": "https://ethlance.com/",
           "description": "The future of work is now! Hire or work for Ether cryptocurrency",
           "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1674816702887494661_f1b0b7.png",
-          "cover": null,
+          "cover": "http://test.com",
           "categories": [
             50,
             30
@@ -97,7 +97,7 @@
           "url": "https://namebazaar.io/",
           "description": "A peer-to-peer marketplace for the exchange of names registered via the Ethereum Name Service.",
           "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1673246774900294659_a64bad.png",
-          "cover": null,
+          "cover": "http://another.one",
           "categories": [
             30
           ]
@@ -108,7 +108,7 @@
           "url": "https://opensea.io/",
           "description": "Peer-to-peer marketplace for rare digital items.",
           "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1710556308551238676_308bf8.png",
-          "cover": null,
+          "cover": "http://sneezing.no",
           "categories": [
             30,
             20
@@ -125,7 +125,7 @@
           "url": "https://beta.cent.co/",
           "description": "Give wisdom, get money. Ask a question and offer a bounty for the best answers. The userbase then votes to determine which answers receive that bounty.",
           "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1673246598739526658_613d88.png",
-          "cover": null,
+          "cover": "http://cover.com",
           "categories": [
             40
           ]
@@ -136,7 +136,7 @@
           "url": "http://cryptospeech.com/",
           "description": "Decentralized, Twitter-style messages stored for eternity",
           "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1715336347104838676_2649b0.png",
-          "cover": null,
+          "cover": "http://website.eu",
           "categories": [
             40
           ]
@@ -147,7 +147,7 @@
           "url": "https://leeroy.io/",
           "description": "Leeroy is a decentralised social network built on Ethereum.",
           "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1674820117050950662_7ad6b4.png",
-          "cover": null,
+          "cover": "http://url.url",
           "categories": [
             40
           ]
@@ -163,7 +163,7 @@
           "url": "https://ethlance.com/",
           "description": "The future of work is now! Hire or work for Ether cryptocurrency",
           "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1674816702887494661_f1b0b7.png",
-          "cover": null,
+          "cover": "http://cover.up",
           "categories": [
             50,
             30
@@ -180,7 +180,7 @@
           "url": "https://givehongbao.com/",
           "description": "Crowdfunded campaigns powered by the Ethereum Network. Hong Bao lets you raise money for any cause, anywhere in the world.",
           "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1708351748814406669_c823c8.jpg",
-          "cover": null,
+          "cover": "http://fake-cover.url",
           "categories": [
             60
           ]
@@ -191,7 +191,7 @@
           "url": "https://staketree.com/",
           "description": "Growing sustainable funding for creators, teams & projects using ethereum.",
           "icon": "https://bucketeer-7c93db19-eda4-413d-9025-fca45df5773a.s3.amazonaws.com/public/avatar/1729799196489286680_587004.jpg",
-          "cover": null,
+          "cover": "http://fake.com",
           "categories": [
             60
           ]

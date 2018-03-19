@@ -35,9 +35,13 @@ final class DirectoryAPIClient {
     var teapot: Teapot
     var baseURL: URL
 
-    convenience init(teapot: Teapot) {
+    convenience init(teapot: Teapot, cacheEnabled: Bool = true) {
         self.init()
         self.teapot = teapot
+        
+        if !cacheEnabled {
+            cache.removeAll()
+        }
     }
 
     private init() {
