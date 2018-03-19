@@ -17,6 +17,7 @@ abstract_target 'CocoaPods' do
   pod 'Fabric', '~> 1.7.2'
   pod 'Crashlytics', '~>3.9.3'
   pod 'SwiftLint', '~>0.24.0'
+  pod 'Sourcery', '~>0.10.1'
 
   target 'Development' do
       
