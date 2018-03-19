@@ -8,11 +8,11 @@ struct LocalizedString {
     let value: String
 }
 
-guard let rootFolder = Folder.current.parent?.parent?.parent else {
-    fatalError("Could not access root folder")
+guard let sourceRootPath = ProcessInfo.processInfo.environment["SRCROOT"] else {
+    fatalError("Could not access source root!")
 }
 
-print("Root: \(rootFolder.path)")
+let rootFolder = try Folder(path: sourceRootPath)
 
 let toshiFolder = try rootFolder.subfolder(named: "Toshi")
 let generatedFolder = try toshiFolder.subfolder(named: "Generated")
