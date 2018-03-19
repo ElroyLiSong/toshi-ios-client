@@ -1,8 +1,31 @@
 import Foundation
-import Files // marathon:https://github.com/JohnSundell/Files.git
-import PathKit // marathon:https://github.com/kylef/PathKit.git
-import ShellOut // marathon:https://github.com/johnsundell/shellout.git
-import Stencil // marathon:https://github.com/kylef/Stencil.git
+import Files
+import PathKit
+import ShellOut
+import Stencil
+
+enum StencilScriptError: Error {
+    case
+    couldNotLoadDictionary
+}
+
+func hasFileChanged(named fileName: String) throws -> Bool {
+    let diff = try shellOut(to: ShellOutCommand(string: "git diff --name-only"))
+
+    let filesInDiff = diff
+        .components(separatedBy: "\n") // Split the file names into an array
+        .flatMap { $0.components(separatedBy: "/").last } // Take the last path component of each file name
+
+    return filesInDiff.contains(fileName)
+}
+
+func loadDictionary(from file: File) throws -> [String: String] {
+    guard let dictionary = NSDictionary(contentsOfFile: file.path) as? [String: String] else {
+        throw StencilScriptError.couldNotLoadDictionary
+    }
+
+    return dictionary 
+}
 
 struct LocalizedString {
     let key: String
@@ -23,13 +46,19 @@ let codeFolder = try generatedFolder.subfolder(named: "Code")
 let resourcesFolder = try toshiFolder.subfolder(named: "Resources")
 let baseLanguageFolder = try resourcesFolder.subfolder(named: "Base.lproj")
 
-let localizableFile = try baseLanguageFolder.file(named: "Localizable.strings")
-guard let localizableContents = NSDictionary(contentsOfFile: localizableFile.path) as? [String: String] else {
-    fatalError("Could not load localizable contents")
+let localizableFileName = "Localizable.strings"
+
+guard try hasFileChanged(named: localizableFileName) else {
+    print("\(localizableFileName) has not changed, not regenerating")
+    exit(0)
 }
 
-let localizedStrings: [LocalizedString] = localizableContents.map { tuple in
-    let (key, value) = tuple
+let localizableFile = try baseLanguageFolder.file(named: localizableFileName)
+let localizableContents = try loadDictionary(from: localizableFile)
+
+let sortedKeys = localizableContents.keys.sorted()
+let localizedStrings: [LocalizedString] = sortedKeys.map { key in
+    let value = localizableContents[key]!
     let valueWithoutNewlineCharacters = value.replacingOccurrences(of: "\n", with: "\\n")
     return LocalizedString(key: key, value: valueWithoutNewlineCharacters)
 }
