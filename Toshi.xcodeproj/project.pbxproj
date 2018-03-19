@@ -1100,7 +1100,6 @@
 		D197BFFC874FC46F485BE295 /* SofaPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197BC4FF536D4350C725251 /* SofaPayment.swift */; };
 		E1A95D551E6EF092002762DA /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A95D541E6EF092002762DA /* SettingsController.swift */; };
 		E60A52A71F28DC5B0032CAC0 /* DevelopmentTokenURLPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4D8CF1E72CB6E00389DF9 /* DevelopmentTokenURLPaths.swift */; };
-		E60A52B11F28E7830032CAC0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9202E561ED84F6A0036E9B7 /* Extensions.swift */; };
 		E67683561F4464980014B2D4 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67683551F4464980014B2D4 /* Quick.framework */; };
 		E67683571F44649F0014B2D4 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = E67683551F4464980014B2D4 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E67683591F44673E0014B2D4 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67683581F44673E0014B2D4 /* Nimble.framework */; };
@@ -3750,7 +3749,6 @@
 				9FE5338A1F0B9CDA00B0C2B5 /* BaseConverter.swift in Sources */,
 				33CF51311FD181F700293FD1 /* DLog.swift in Sources */,
 				33731683200901BD0055975E /* String+AdditionsTests.swift in Sources */,
-				E60A52B11F28E7830032CAC0 /* Extensions.swift in Sources */,
 				2BF2856D2018EF0200DA528D /* TestAppDelegate.swift in Sources */,
 				33316914202B8A8C00A396A2 /* UIImage+ReadQRCode.swift in Sources */,
 				84AED6FE1F42ED91003C38E8 /* String+Regex.swift in Sources */,
