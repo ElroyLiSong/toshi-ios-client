@@ -2975,7 +2975,6 @@
 			buildConfigurationList = A9603F911F4DABDC00BF57B1 /* Build configuration list for PBXNativeTarget "Development" */;
 			buildPhases = (
 				BDA52DBC0F3D4D09170B7AA8 /* [CP] Check Pods Manifest.lock */,
-				3317D08E20601D230052C62C /* Marathon Run Script */,
 				A9603D391F4DABDC00BF57B1 /* Sources */,
 				A9603F381F4DABDC00BF57B1 /* Frameworks */,
 				A9603F631F4DABDC00BF57B1 /* Bump build number */,
@@ -3400,20 +3399,6 @@
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" d6f421ea196993dc3048f7ba96ef27a75a55b2a2 2a282eff9d37c538d0a30d8fc979703d081109781ba8d92078c71c563f76ce66";
 		};
 		3317D08D20601CB30052C62C /* Marathon Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Marathon Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Bash/marathon.sh\"";
-		};
-		3317D08E20601D230052C62C /* Marathon Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
