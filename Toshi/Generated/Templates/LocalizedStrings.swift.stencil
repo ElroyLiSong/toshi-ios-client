@@ -14,7 +14,8 @@ enum LocalizedKey: String {
 
 struct Localized { {% for string in localized_strings %}
     /// Value in {{ developer_language }}: "{{ string.value }}"
-    static let {{ string.key }} = LocalizedKey.{{ string.key }}.currentValue{% endfor %}
+    static let {{ string.key }} = LocalizedKey.{{ string.key }}.currentValue
+    {% endfor %}
 }
 
 enum LocalizedPluralKey: String {

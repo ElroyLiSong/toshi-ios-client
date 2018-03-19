@@ -8,21 +8,34 @@ struct LocalizedString {
     let value: String
 }
 
-guard let rootFolder = Folder.current.parent?.parent else {
+guard let rootFolder = Folder.current.parent?.parent?.parent else {
     fatalError("Could not access root folder")
 }
 
-let generatedFolder = try rootFolder.subfolder(named: "Generated")
+print("Root: \(rootFolder.path)")
+
+let toshiFolder = try rootFolder.subfolder(named: "Toshi")
+let generatedFolder = try toshiFolder.subfolder(named: "Generated")
 let templatesFolder = try generatedFolder.subfolder(named: "Templates")
 let codeFolder = try generatedFolder.subfolder(named: "Code")
 
+let resourcesFolder = try toshiFolder.subfolder(named: "Resources")
+let baseLanguageFolder = try resourcesFolder.subfolder(named: "Base.lproj")
+
+let localizableFile = try baseLanguageFolder.file(named: "Localizable.strings")
+guard let localizableContents = NSDictionary(contentsOfFile: localizableFile.path) as? [String: String] else {
+    fatalError("Could not load localizable contents")
+}
+
+let localizedStrings: [LocalizedString] = localizableContents.map {
+    tuple in
+    let (key, value) = tuple
+    let valueWithoutNewlineCharacters = value.replacingOccurrences(of: "\n", with: "\\n")
+    return LocalizedString(key: key, value: valueWithoutNewlineCharacters)
+}
+
 let fileSystemLoader = FileSystemLoader(paths: [ Path(templatesFolder.path) ])
 let environment = Environment(loader: fileSystemLoader)
-
-let localizedStrings = [
-    LocalizedString(key: "string_one", value: "This is string one"),
-    LocalizedString(key: "string_two", value: "This is string two"),
-]
 
 let localizedPlurals = [
     LocalizedString(key: "plural_one", value: "Going for %d plurals"),
@@ -41,3 +54,4 @@ let file = try codeFolder.createFileIfNeeded(withName: "LocalizedStrings.swift")
 try file.write(string: fileContents)
 
 print("Rendered \(file.name)")
+
