@@ -49,6 +49,7 @@ final class SplashViewController: UIViewController {
         label.textColor = Theme.viewBackgroundColor
         label.numberOfLines = 0
         label.text = Localized.welcome_title
+        label.isAccessibilityElement = true
 
         return label
     }()
@@ -155,6 +156,11 @@ final class SplashViewController: UIViewController {
         
         let read = UIAlertAction(title: Localized.accept_terms_action_read, style: .default) { [weak self] _ in
             guard let url = URL(string: "http://www.toshi.org/terms-of-service/") else { return }
+            guard !UIApplication.isUITesting else {
+                self?.showTestAlert(message: TestOnlyString.readTermsAlertMessage(termsURL: url))
+                return
+            }
+            
             let controller = SFSafariViewController(url: url, entersReaderIfAvailable: true)
             controller.delegate = self
             controller.preferredControlTintColor = Theme.tintColor

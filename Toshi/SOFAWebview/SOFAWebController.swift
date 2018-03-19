@@ -240,16 +240,6 @@ final class SOFAWebController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-        guard isMovingFromParentViewController else { return }
-
-        scriptMessageHandlersNames.forEach { handlerName in
-            webViewConfiguration.userContentController.removeScriptMessageHandler(forName: handlerName)
-        }
-    }
-
     func load(url: URL) {
         let request = URLRequest(url: url)
         webView.load(request)
@@ -278,6 +268,11 @@ final class SOFAWebController: UIViewController {
 
     @objc private func closeButtonTapped() {
         delegate?.sofaWebControllerWillFinish(self)
+
+        scriptMessageHandlersNames.forEach { handlerName in
+            webViewConfiguration.userContentController.removeScriptMessageHandler(forName: handlerName)
+        }
+
         dismiss(animated: true)
     }
 

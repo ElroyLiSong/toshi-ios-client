@@ -72,6 +72,7 @@ class TabBarController: UITabBarController, OfflineAlertDisplaying {
         reachabilityManager.register()
 
         setupOfflineAlertView(hidden: true)
+        tabBar.accessibilityIdentifier = AccessibilityIdentifier.mainTabBar.rawValue
     }
 
     required init?(coder _: NSCoder) {

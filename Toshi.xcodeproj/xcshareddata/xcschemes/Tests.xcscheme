@@ -40,6 +40,16 @@
                ReferencedContainer = "container:Toshi.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "33C034211FFE69E700A9C59C"
+               BuildableName = "Tests_UI.xctest"
+               BlueprintName = "Tests_UI"
+               ReferencedContainer = "container:Toshi.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

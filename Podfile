@@ -27,9 +27,13 @@ abstract_target 'CocoaPods' do
   end
 
   target 'Debug' do
-
+    
     target 'Tests' do
-        inherit! :search_paths
+      inherit! :search_paths
+    end
+    
+    target 'Tests_UI' do
+      inherit! :search_paths
     end
   end
   

@@ -314,6 +314,8 @@ extension SettingsController: UITableViewDataSource {
             cell.accessoryType = .none
         }
 
+        cell.isAccessibilityElement = true
+        
         return cell
     }
 
