@@ -2841,6 +2841,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F9238C81E24F1D2004BEEE0 /* Build configuration list for PBXNativeTarget "Debug" */;
 			buildPhases = (
+				3317D08D20601CB30052C62C /* Marathon Run Script */,
 				B6010FBB4BE06EE38991BDC7 /* [CP] Check Pods Manifest.lock */,
 				9F9238AD1E24F1D2004BEEE0 /* Sources */,
 				9F9238AE1E24F1D2004BEEE0 /* Frameworks */,
@@ -2864,6 +2865,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9603F911F4DABDC00BF57B1 /* Build configuration list for PBXNativeTarget "Development" */;
 			buildPhases = (
+				3317D08E20601D230052C62C /* Marathon Run Script */,
 				BDA52DBC0F3D4D09170B7AA8 /* [CP] Check Pods Manifest.lock */,
 				A9603D391F4DABDC00BF57B1 /* Sources */,
 				A9603F381F4DABDC00BF57B1 /* Frameworks */,
@@ -3255,6 +3257,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" d6f421ea196993dc3048f7ba96ef27a75a55b2a2 2a282eff9d37c538d0a30d8fc979703d081109781ba8d92078c71c563f76ce66";
+		};
+		3317D08D20601CB30052C62C /* Marathon Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Marathon Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Bash/marathon.sh\"";
+		};
+		3317D08E20601D230052C62C /* Marathon Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Marathon Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Bash/marathon.sh\"";
 		};
 		3361C7C21FD99BDD00E5600C /* SwiftLint Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
