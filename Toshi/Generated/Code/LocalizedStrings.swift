@@ -16,6 +16,7 @@ enum LocalizedKey: String {
     active_network_format,
     alert_ok_action_title,
     attachment_message_preview_string,
+    back_action_title,
     balance_action_deposit,
     balance_action_send,
     balance_navigation_title,
@@ -84,6 +85,7 @@ enum LocalizedKey: String {
     deposit_money_4_title,
     deposit_money_header_text,
     deposit_money_title,
+    done_action_title,
     edit_profile_about_label,
     edit_profile_change_photo,
     edit_profile_display_name_label,
@@ -353,6 +355,9 @@ struct Localized {
     /// `en`: "Attachment"
     static let attachment_message_preview_string = LocalizedKey.attachment_message_preview_string.currentValue
     
+    /// `en`: "Back"
+    static let back_action_title = LocalizedKey.back_action_title.currentValue
+    
     /// `en`: "Deposit"
     static let balance_action_deposit = LocalizedKey.balance_action_deposit.currentValue
     
@@ -556,6 +561,9 @@ struct Localized {
     
     /// `en`: "Deposit Money"
     static let deposit_money_title = LocalizedKey.deposit_money_title.currentValue
+    
+    /// `en`: "Done"
+    static let done_action_title = LocalizedKey.done_action_title.currentValue
     
     /// `en`: "About"
     static let edit_profile_about_label = LocalizedKey.edit_profile_about_label.currentValue

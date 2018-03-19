@@ -30,9 +30,9 @@ enum SplashScreenButton {
     var accessibilityLabel: String {
         switch self {
         case .createNewAccount:
-            return Localized("create_account_button_title")
+            return Localized.create_account_button_title
         case .signIn:
-            return Localized("sign_in_button_title")
+            return Localized.sign_in_button_title
         }
     }
 }
@@ -48,11 +48,11 @@ enum TermsOption {
     var accessibilityLabel: String {
         switch self {
         case .agree:
-            return Localized("accept_terms_action_agree")
+            return Localized.accept_terms_action_agree
         case .cancel:
-            return Localized("cancel_action_title")
+            return Localized.cancel_action_title
         case .read:
-            return Localized("accept_terms_action_read")
+            return Localized.accept_terms_action_read
         }
     }
 }
@@ -64,7 +64,7 @@ enum TermsScreenOption {
     var accessibilityLabel: String {
         switch self {
         case .done:
-            return Localized("done_action_title")
+            return Localized.done_action_title
         }
     }
 }
@@ -113,7 +113,7 @@ extension SplashScreenRobot {
     @discardableResult
     func validateOnSplashScreen(file: StaticString = #file,
                                 line: UInt = #line) -> SplashScreenRobot {
-        confirmViewVisibleWith(accessibilityLabel: Localized("welcome_title"),
+        confirmViewVisibleWith(accessibilityLabel: Localized.welcome_title,
                                file: file,
                                line: line)
         
@@ -123,7 +123,7 @@ extension SplashScreenRobot {
     @discardableResult
     func validateOffSplashScreen(file: StaticString = #file,
                                  line: UInt = #line) -> SplashScreenRobot {
-        confirmViewGoneWith(accessibilityLabel: Localized("welcome_title"),
+        confirmViewGoneWith(accessibilityLabel: Localized.welcome_title,
                             file: file,
                             line: line)
         

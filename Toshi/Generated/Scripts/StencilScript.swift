@@ -24,7 +24,7 @@ func loadDictionary(from file: File) throws -> [String: String] {
         throw StencilScriptError.couldNotLoadDictionary
     }
 
-    return dictionary 
+    return dictionary
 }
 
 struct LocalizedString {

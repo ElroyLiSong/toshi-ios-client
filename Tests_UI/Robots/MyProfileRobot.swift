@@ -35,7 +35,7 @@ enum MyProfileCell {
     var accessibilityLabel: String {
         switch self {
         case .advanced:
-            return Localized("settings_cell_advanced")
+            return Localized.settings_cell_advanced
         case .balance:
             assertionFailure("You need to set this up on the balance cell before you use it")
             return "TODO"
@@ -43,13 +43,13 @@ enum MyProfileCell {
             assertionFailure("You need to set this up on the detailed profile cell before you use it")
             return "TODO"
         case .localCurrency:
-            return Localized("currency_picker_title")
+            return Localized.currency_picker_title
         case .qrCode:
-            return Localized("settings_cell_qr")
+            return Localized.settings_cell_qr
         case .signOut:
-            return Localized("settings_cell_signout")
+            return Localized.settings_cell_signout
         case .storePassphrase:
-            return Localized("settings_cell_passphrase")
+            return Localized.settings_cell_passphrase
         }
     }
 }
@@ -65,11 +65,11 @@ enum SignOutDialogOption {
     var accessibilityLabel: String {
         switch self {
         case .cancel:
-            return Localized("cancel_action_title")
+            return Localized.cancel_action_title
         case .delete:
-            return Localized("settings_signout_action_delete")
+            return Localized.settings_signout_action_delete
         case .signOut:
-            return Localized("settings_signout_action_signout")
+            return Localized.settings_signout_action_signout
         }
     }
 }
@@ -107,7 +107,7 @@ extension MyProfileRobot {
     @discardableResult
     func validateOnMyProfileScreen(file: StaticString = #file,
                                    line: UInt = #line) -> MyProfileRobot {
-        confirmViewVisibleWith(accessibilityLabel: Localized("settings_cell_qr"),
+        confirmViewVisibleWith(accessibilityLabel: Localized.settings_cell_qr,
                                file: file,
                                line: line)
         
@@ -117,7 +117,7 @@ extension MyProfileRobot {
     @discardableResult
     func validateOffMyProfileScreen(file: StaticString = #file,
                                     line: UInt = #line) -> MyProfileRobot {
-        confirmViewGoneWith(accessibilityLabel: Localized("settings_cell_qr"),
+        confirmViewGoneWith(accessibilityLabel: Localized.settings_cell_qr,
                             file: file,
                             line: line)
         
@@ -127,7 +127,7 @@ extension MyProfileRobot {
     @discardableResult
     func validateNoFundsSignOutDialogShowing(file: StaticString = #file,
                                              line: UInt = #line) -> MyProfileRobot {
-        confirmViewVisibleWith(accessibilityLabel: Localized("settings_signout_nofunds_title"),
+        confirmViewVisibleWith(accessibilityLabel: Localized.settings_signout_nofunds_title,
                                file: file,
                                line: line)
         
@@ -137,7 +137,7 @@ extension MyProfileRobot {
     @discardableResult
     func validateNoFundsSignOutDialogGone(file: StaticString = #file,
                                           line: UInt = #line) -> MyProfileRobot {
-        confirmViewGoneWith(accessibilityLabel: Localized("settings_signout_nofunds_title"),
+        confirmViewGoneWith(accessibilityLabel: Localized.settings_signout_nofunds_title,
                             file: file,
                             line: line)
         

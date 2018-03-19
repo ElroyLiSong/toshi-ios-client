@@ -31,15 +31,15 @@ enum TabBarItem {
     var accessibilityLabel: String {
         switch self {
         case .dapps:
-            return Localized("tab_bar_title_dapps")
+            return Localized.tab_bar_title_dapps
         case .favorites:
-            return Localized("tab_bar_title_favorites")
+            return Localized.tab_bar_title_favorites
         case .recent:
-            return Localized("tab_bar_title_recent")
+            return Localized.tab_bar_title_recent
         case .settings:
-            return Localized("tab_bar_title_settings")
+            return Localized.tab_bar_title_settings
         case .wallet:
-            return Localized("tab_bar_title_wallet")
+            return Localized.tab_bar_title_wallet
         }
     }
 }
