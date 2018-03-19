@@ -11,21 +11,21 @@
 
 
 /* Dapps */
-"dapps-search-placeholder" = "Search or enter Đapp URL";
-"dapps-search-header-title" = "Explore the decentralized web.";
+"dapps_search_placeholder" = "Search or enter Đapp URL";
+"dapps_search_header_title" = "Explore the decentralized web.";
 
-"browse-top-rated-apps" = "Top Rated";
-"browse-featured-dapps" = "Featured";
-"dapps-section-title" = "Đapps";
-"dapps-open-url-section-title" = "Go to";
-"dapps-see-more-button-title" = "SEE MORE";
-"dapps-see-all-button-title" = "See All Đapps";
-"dapps-all-list-title" = "All Đapps";
-"dapps-search-with-google-section-title" = "Search with Google";
-"browse-top-rated-public-users" = "Top Rated Public Users";
-"browse-latest-public-users" = "Latest Public Users";
+"browse_top_rated_apps" = "Top Rated";
+"browse_featured_dapps" = "Featured";
+"dapps_section_title" = "Đapps";
+"dapps_open_url_section_title" = "Go to";
+"dapps_see_more_button_title" = "SEE MORE";
+"dapps_see_all_button_title" = "See All Đapps";
+"dapps_all_list_title" = "All Đapps";
+"dapps_search_with_google_section_title" = "Search with Google";
+"browse_top_rated_public_users" = "Top Rated Public Users";
+"browse_latest_public_users" = "Latest Public Users";
 
-"browse-more-button" = "More";
+"browse_more_button" = "More";
 
 /* Messages */
 "messages_payment_approve" = "Approve";
@@ -162,9 +162,9 @@
 
 /* Image Picker related */
 
-"image-picker-select-source-title" = "Select source";
-"image-picker-camera-action-title" = "Camera";
-"image-picker-library-action-title" = "Library";
+"image_picker_select_source_title" = "Select source";
+"image_picker_camera_action_title" = "Camera";
+"image_picker_library_action_title" = "Library";
 
 /* Profile QR Code */
 
@@ -191,19 +191,19 @@
 "currency_picker_header_suggested" = "Suggested";
 "currency_picker_header_other" = "Other";
 
-"error-alert-title" = "Error";
-"invalid-username-alert-message" = "Username is invalid! Use numbers, letters, and underscores only.";
+"error_alert_title" = "Error";
+"invalid_username_alert_message" = "Username is invalid! Use numbers, letters, and underscores only.";
 
-"ropsten-test-network-title" = "Ropsten Test Network";
-"toshi-test-network-title" = "Toshi Test Network";
-"mainnet-title" = "Mainnet";
+"ropsten_test_network_title" = "Ropsten Test Network";
+"toshi_test_network_title" = "Toshi Test Network";
+"mainnet_title" = "Mainnet";
 
 /* Generic Alerts */
-"network-alert-title" = "Be aware!";
-"network-alert-text" = "Toshi is not an appropriate wallet for storage of large sums of ETH.";
-"alert-ok-action-title" = "OK";
-"sign-out-failure-title" = "Could not sign out";
-"sign-out-failure-message" = "Error attempting to unregister from chat service. Our engineers are looking into it.";
+"network_alert_title" = "Be aware!";
+"network_alert_text" = "Toshi is not an appropriate wallet for storage of large sums of ETH.";
+"alert_ok_action_title" = "OK";
+"sign_out_failure_title" = "Could not sign out";
+"sign_out_failure_message" = "Error attempting to unregister from chat service. Our engineers are looking into it.";
 "cancel_action_title" = "Cancel";
 "copy_action_title" = "Copy";
 "not_now_action_title" = "Not now";
