@@ -172,7 +172,7 @@ extension String {
     ///   - truncationString: The string to use to truncate. Defaults to an ellipsis.
     /// - Returns: The truncated string.
     func truncateMiddle(charactersOnEitherSide: Int = 5, truncationString: String = "...") -> String {
-        guard length > charactersOnEitherSide * 2 else {
+        guard count > charactersOnEitherSide * 2 else {
             // Not long enough to truncate
             return self
         }
