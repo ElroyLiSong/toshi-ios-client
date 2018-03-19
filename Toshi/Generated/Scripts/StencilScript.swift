@@ -27,8 +27,7 @@ guard let localizableContents = NSDictionary(contentsOfFile: localizableFile.pat
     fatalError("Could not load localizable contents")
 }
 
-let localizedStrings: [LocalizedString] = localizableContents.map {
-    tuple in
+let localizedStrings: [LocalizedString] = localizableContents.map { tuple in
     let (key, value) = tuple
     let valueWithoutNewlineCharacters = value.replacingOccurrences(of: "\n", with: "\\n")
     return LocalizedString(key: key, value: valueWithoutNewlineCharacters)
@@ -39,13 +38,13 @@ let environment = Environment(loader: fileSystemLoader)
 
 let localizedPlurals = [
     LocalizedString(key: "plural_one", value: "Going for %d plurals"),
-    LocalizedString(key: "plural_two", value: "There are %d noises"),
+    LocalizedString(key: "plural_two", value: "There are %d noises")
 ]
 
 let context: [String: Any] = [
-    "developer_language" : "English",
-    "localized_strings" : localizedStrings,
-    "localized_plurals" : localizedPlurals,
+    "developer_language": "en",
+    "localized_strings": localizedStrings,
+    "localized_plurals": localizedPlurals
 ]
 
 let fileContents = try environment.renderTemplate(name: "LocalizedStrings.swift.stencil", context: context)
@@ -54,4 +53,3 @@ let file = try codeFolder.createFileIfNeeded(withName: "LocalizedStrings.swift")
 try file.write(string: fileContents)
 
 print("Rendered \(file.name)")
-

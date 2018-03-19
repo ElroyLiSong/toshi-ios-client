@@ -110,6 +110,7 @@
 "settings_cell_passphrase" = "Store passphrase";
 "settings_cell_advanced" = "Advanced";
 "settings_cell_signout" = "Sign out";
+"settings_cell_local_currency" = "Local currency";
 
 "settings_signout_error_title" = "No user found!";
 "settings_signout_error_message" = "This is an error. Please report this.";
