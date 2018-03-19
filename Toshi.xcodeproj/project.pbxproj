@@ -392,6 +392,9 @@
 		338472F8202A68A9000F5A8A /* QuickAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338472E6202A3F1F000F5A8A /* QuickAlertView.swift */; };
 		338472F9202A68A9000F5A8A /* QuickAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338472E6202A3F1F000F5A8A /* QuickAlertView.swift */; };
 		339959AB1FCED3D700D69A01 /* DLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339959AA1FCED3D700D69A01 /* DLog.swift */; };
+		3399D6E3205FED0100CAFAE5 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3399D6E2205FED0100CAFAE5 /* LocalizedStrings.swift */; };
+		3399D6E4205FED0100CAFAE5 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3399D6E2205FED0100CAFAE5 /* LocalizedStrings.swift */; };
+		3399D6E5205FED0100CAFAE5 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3399D6E2205FED0100CAFAE5 /* LocalizedStrings.swift */; };
 		33C7BABF2056C37F00410315 /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C7BABE2056C37F00410315 /* InsetTextField.swift */; };
 		33C7BAC02056E6A700410315 /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C7BABE2056C37F00410315 /* InsetTextField.swift */; };
 		33C7BAC12056E6A700410315 /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C7BABE2056C37F00410315 /* InsetTextField.swift */; };
@@ -1294,6 +1297,9 @@
 		338472EB202A5DD4000F5A8A /* SFMono-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFMono-Semibold.otf"; sourceTree = "<group>"; };
 		339959AA1FCED3D700D69A01 /* DLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLog.swift; sourceTree = "<group>"; };
 		339959AC1FCEE74F00D69A01 /* EarlGrey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EarlGrey.framework; path = Carthage/Build/iOS/EarlGrey.framework; sourceTree = "<group>"; };
+		3399D6A9205FD11800CAFAE5 /* LocalizedStrings.swift.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = LocalizedStrings.swift.stencil; sourceTree = "<group>"; };
+		3399D6AF205FE4C900CAFAE5 /* StencilScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StencilScript.swift; sourceTree = "<group>"; };
+		3399D6E2205FED0100CAFAE5 /* LocalizedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
 		33C7BABE2056C37F00410315 /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
 		33CD5167202CDC60005D6DEC /* TokenEtherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenEtherDetailViewController.swift; sourceTree = "<group>"; };
 		33CF51341FD184AB00293FD1 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
@@ -1996,6 +2002,40 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		3399D6A6205FD0D700CAFAE5 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				3399D6A8205FD0F700CAFAE5 /* Code */,
+				3399D6AC205FD39C00CAFAE5 /* Scripts */,
+				3399D6A7205FD0E500CAFAE5 /* Templates */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		3399D6A7205FD0E500CAFAE5 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				3399D6A9205FD11800CAFAE5 /* LocalizedStrings.swift.stencil */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		3399D6A8205FD0F700CAFAE5 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				3399D6E2205FED0100CAFAE5 /* LocalizedStrings.swift */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		3399D6AC205FD39C00CAFAE5 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				3399D6AF205FE4C900CAFAE5 /* StencilScript.swift */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
 		6AE44D951F45C37A00F5AF02 /* LocalCurrency */ = {
 			isa = PBXGroup;
 			children = (
@@ -2081,6 +2121,7 @@
 				2BE6FB0D1EFC0BE800B0B848 /* Avatars */,
 				9F9238CD1E24F3DE004BEEE0 /* Controllers */,
 				9FAE4A6C1E4CBFCA00126217 /* Extensions */,
+				3399D6A6205FD0D700CAFAE5 /* Generated */,
 				A9202E491ED84F6A0036E9B7 /* MessagesUI */,
 				9F9238CF1E24F3F1004BEEE0 /* Models */,
 				2B002D8D1F17B9F900D92240 /* Network */,
@@ -3652,6 +3693,7 @@
 				6AE44D981F45C38B00F5AF02 /* CurrencyPicker.swift in Sources */,
 				A9202E701ED850270036E9B7 /* ImagesViewControllerTransition.swift in Sources */,
 				A9202E6A1ED850130036E9B7 /* Extensions.swift in Sources */,
+				3399D6E5205FED0100CAFAE5 /* LocalizedStrings.swift in Sources */,
 				149F9A891E72E29A00FB74AA /* SoundPlayer.swift in Sources */,
 				A9CADC381F94C5B10096D017 /* ReputationBarView.swift in Sources */,
 				2B35F2C01EF93320006A0FD0 /* ActivityIndicating.swift in Sources */,
@@ -3925,6 +3967,7 @@
 				9F5B9BA11EBB530B006448F0 /* RatingView.swift in Sources */,
 				A91D72AF1F8786A70093420C /* ChatButtonsCollectionViewCell.swift in Sources */,
 				2B355BDA1EAE356C0093FA8F /* TokenUser.swift in Sources */,
+				3399D6E3205FED0100CAFAE5 /* LocalizedStrings.swift in Sources */,
 				A9202E591ED84F6A0036E9B7 /* ImageCell.swift in Sources */,
 				2B4E25F61FCCCDE3004614D5 /* TitleSwitchCell.swift in Sources */,
 				A9CADC221F94AF2D0096D017 /* DappsNavigationController.swift in Sources */,
@@ -4198,6 +4241,7 @@
 				A9603E701F4DABDC00BF57B1 /* Extensions.swift in Sources */,
 				A9603E721F4DABDC00BF57B1 /* SoundPlayer.swift in Sources */,
 				A9CADC371F94C5B10096D017 /* ReputationBarView.swift in Sources */,
+				3399D6E4205FED0100CAFAE5 /* LocalizedStrings.swift in Sources */,
 				A9603E771F4DABDC00BF57B1 /* ActivityIndicating.swift in Sources */,
 				A9603E7E1F4DABDC00BF57B1 /* String+Additions.swift in Sources */,
 				A9603E881F4DABDC00BF57B1 /* PassphraseEnableController.swift in Sources */,

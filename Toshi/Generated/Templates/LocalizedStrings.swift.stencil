@@ -1,0 +1,36 @@
+// This file is machine-generated. Please do not edit it by hand.
+
+import Foundation
+
+enum LocalizedKey: String {
+    case
+    {% for string in localized_strings %}{{ string.key }}{% if not forloop.last %},
+    {% endif %}{% endfor %}
+
+    var currentValue: String {
+        return NSLocalizedString(self.rawValue, comment: "")
+    }
+}
+
+struct Localized { {% for string in localized_strings %}
+    /// Value in {{ developer_language }}: "{{ string.value }}"
+    static let {{ string.key }} = LocalizedKey.{{ string.key }}.currentValue{% endfor %}
+}
+
+enum LocalizedPluralKey: String {
+    case
+    {% for string in localized_plurals %}{{ string.key }}{% if not forloop.last %},
+    {% endif %}{% endfor %}
+
+    func currentValue(for count: Int) -> String {
+        let format = NSLocalizedString(self.rawValue, comment: "")
+        return String.localizedStringWithFormat(format, count)
+    }
+}
+
+enum LocalizedPlural { {% for string in localized_plurals %}
+    /// Value in {{ developer_language }}: "{{ string.value }}"
+    static func {{ string.key }}(for count: Int) -> String {
+        return LocalizedPluralKey.{{ string.key }}.currentValue(for: count)
+    }{% endfor %}
+}
