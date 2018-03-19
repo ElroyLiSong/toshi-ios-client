@@ -1,7 +1,8 @@
 import Foundation
-import Files
-import PathKit
-import Stencil
+import Files // marathon:https://github.com/JohnSundell/Files.git
+import PathKit // marathon:https://github.com/kylef/PathKit.git
+import ShellOut // marathon:https://github.com/johnsundell/shellout.git
+import Stencil // marathon:https://github.com/kylef/Stencil.git
 
 struct LocalizedString {
     let key: String
