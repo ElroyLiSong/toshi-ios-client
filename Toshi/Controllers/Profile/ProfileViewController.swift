@@ -394,8 +394,7 @@ final class ProfileViewController: DisappearingNavBarViewController {
             rateThisUserButton.height(.defaultButtonHeight)
 
             if isBotProfile {
-                //TODO: Fixme
-                rateThisUserButton.setTitle(Localized.profile_rate_user, for: .normal)
+                rateThisUserButton.setTitle(Localized.profile_rate_bot, for: .normal)
             } else {
                 rateThisUserButton.setTitle(Localized.profile_rate_user, for: .normal)
             }
