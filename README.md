@@ -12,7 +12,7 @@ Check our SwiftLint [installation guide](https://github.com/toshiapp/toshi-ios-c
 
 ### Code Generation
 
-We're using [Marathon](https://github.com/JohnSundell/Marathon) and [Stencil](https://github.com/kylef/Stencil). You should install Marathon with [the instructions on how to install from the Swift Package manager]()
+We're using [Marathon](https://github.com/JohnSundell/Marathon) and [Stencil](https://github.com/kylef/Stencil). You should install Marathon with [the instructions on how to install from the Swift Package manager](https://github.com/JohnSundell/Marathon#on-macos).
 
 There's some weirdness going on with Stencil's test dependencies, so using a `Marathonfile` results in weird installation issues. In order to actually get Marathon to work for this project, please follow the following st
 
